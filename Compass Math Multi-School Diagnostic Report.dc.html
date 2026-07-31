@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: rgb(226,230,236); font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(53,59,71); }
+  a { color: rgb(0,120,163); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</helmet>
+<div style="display:flex; flex-direction:column; align-items:center; width:100%; max-width:1600px; margin:0 auto; background:rgb(255,255,255);" data-screen-label="Math Multi-School Diagnostic Report">
+
+  <div style="align-self:stretch; background:rgb(255,255,255); display:flex; flex-direction:column; gap:16px; padding:32px 64px;">
+
+    <!-- MAIN NAV -->
+    <div style="align-self:stretch; display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; flex-direction:row; gap:16px; justify-content:flex-end; align-items:center;">
+        <span style="font-size:16px; color:rgb(53,59,71);">Welcome, Alicia</span>
+        <a href="#">Log Out</a>
+      </div>
+      <div style="display:flex; flex-direction:row; gap:24px; align-items:flex-end;">
+        <img src="assets/myanet-logo.png" alt="myANet" style="width:140px; height:49px; object-fit:contain; flex-shrink:0;">
+        <span style="font-weight:700; font-size:36px; line-height:28px; color:rgb(53,59,71); white-space:nowrap;">ANet Demo School</span>
+        <a href="#">Change Selection</a>
+      </div>
+      <div style="display:flex; flex-direction:row; align-items:flex-end; border-bottom:1px solid rgb(213,217,226); background:rgb(255,255,255);">
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Dashboard</span></div>
+        <div style="padding:15px 16px; border-bottom:2px solid #247EA7;"><span style="font-size:16px; white-space:nowrap; color:#227EA7; font-weight:600;">Performance</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Standards</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Assessments</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Quiz Tool</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Assignments</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Students</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Users</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:row; gap:16px; align-items:flex-start; align-self:stretch;">
+
+      <!-- SIDEBAR -->
+      <div style="width:260px; flex-shrink:0; border-radius:4px; background:rgb(255,255,255); outline:1px solid rgb(213,217,226); display:flex; flex-direction:column; padding:3.5px; gap:2px; align-self:flex-start;">
+        <div style="padding:6px 8px 2px; display:flex; flex-direction:row; align-items:center; gap:8px;"><span style="width:14px; height:14px; flex-shrink:0; color:rgb(148,163,184); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><rect x="0" y="0" width="1.273" height="14" rx="0.636" fill="currentColor"></rect><rect x="0" y="12.727" width="14" height="1.273" rx="0.636" fill="currentColor"></rect><rect x="2.97" y="6.364" width="1.273" height="4.666" rx="0.636" fill="currentColor"></rect><rect x="5.939" y="2.97" width="1.273" height="8.06" rx="0.636" fill="currentColor"></rect><rect x="8.909" y="6.364" width="1.273" height="4.666" rx="0.636" fill="currentColor"></rect><rect x="11.879" y="2.97" width="1.273" height="8.06" rx="0.636" fill="currentColor"></rect></svg></span><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Performance Reports</span></div>
+        <a href="Compass Math Teacher Report.dc.html" style="border-radius:4px; padding:7px 10px; text-decoration:none;" style-hover="background:rgb(246,247,249);"><span style="font-size:16px; color:rgb(53,59,71);">Math Teacher Report</span></a>
+        <a href="Compass Math Teacher Report (Preview).dc.html" style="border-radius:4px; padding:7px 10px; text-decoration:none;" style-hover="background:rgb(246,247,249);"><span style="font-size:16px; color:rgb(53,59,71);">Math Teacher Report (Preview)</span></a>
+        <div style="border-radius:4px; background:rgb(68,78,96); padding:7px 10px;"><span style="font-size:16px; color:rgb(255,255,255); text-decoration:underline;">Math Multi-School Diagnostic Report (Preview)</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">ELA</span></div>
+        <div style="padding:6px 8px 2px; display:flex; flex-direction:row; align-items:center; gap:8px;"><span style="width:14px; height:14px; flex-shrink:0; color:rgb(148,163,184); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 2.292 14 L 2.291 14 C 1.679 14 1.104 13.761 0.671 13.328 C -0.223 12.434 -0.224 10.981 0.669 10.088 L 5.076 5.681 C 4.672 4.13 5.111 2.456 6.244 1.323 C 7.388 0.179 9.069 -0.268 10.629 0.159 C 10.835 0.215 10.996 0.376 11.05 0.584 C 11.105 0.791 11.045 1.011 10.894 1.162 L 8.933 3.122 L 9.351 4.649 L 10.877 5.066 L 12.837 3.106 C 12.989 2.956 13.209 2.894 13.416 2.951 C 13.622 3.005 13.785 3.166 13.841 3.372 C 14.267 4.932 13.821 6.612 12.677 7.757 C 11.544 8.889 9.869 9.325 8.318 8.924 L 3.911 13.33 C 3.479 13.762 2.904 14 2.292 14 Z M 9.145 1.214 C 8.381 1.282 7.65 1.614 7.092 2.172 C 6.18 3.085 5.884 4.417 6.32 5.652 C 6.397 5.869 6.342 6.113 6.179 6.276 L 1.518 10.937 C 1.093 11.362 1.094 12.054 1.52 12.48 C 1.726 12.686 2 12.8 2.292 12.8 L 2.292 12.8 C 2.584 12.8 2.857 12.686 3.063 12.482 L 7.724 7.821 C 7.888 7.657 8.13 7.602 8.348 7.679 C 9.584 8.113 10.917 7.821 11.829 6.908 C 12.387 6.349 12.719 5.618 12.787 4.854 L 11.48 6.161 C 11.328 6.313 11.105 6.372 10.897 6.316 L 8.704 5.717 C 8.5 5.661 8.34 5.501 8.284 5.297 L 7.684 3.104 C 7.627 2.896 7.686 2.673 7.838 2.521 L 9.145 1.214 Z" fill="currentColor" fill-rule="evenodd"></path></svg></span><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Tools and Resources</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Manage Custom Groups</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Data Export</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Helpful Resources</span></div>
+      </div>
+
+      <!-- GRAY CONTAINER -->
+      <div style="flex-grow:1; min-width:0; border-radius:4px; background:rgb(246,247,249); display:flex; flex-direction:row; padding:16px; align-items:flex-start;">
+        <div style="flex-grow:1; min-width:0; border-radius:4px; background:rgb(255,255,255); display:flex; flex-direction:column; gap:24px; padding:24px; align-items:flex-start;">
+
+          <!-- HEADER -->
+          <div style="align-self:stretch; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-weight:700; font-size:30px; line-height:1.15; color:rgb(53,59,71);">Math Multi-School Diagnostic Report</span>
+            <span style="font-size:14px; color:rgb(109,109,109);">Last updated: Month DD, YYYY</span>
+            <span style="font-size:16px; line-height:1.45; color:rgb(53,59,71); text-wrap:pretty;">This report provides district-level insights using aggregated diagnostic data from Compass Math assessments. Multi-school leaders can compare overall distributions and identify schools and grades that need extra support with grade-level learning components—discrete skills within a standard.</span>
+          </div>
+
+          <!-- LEGEND CARDS -->
+          <div style="align-self:stretch; display:flex; flex-direction:row; gap:16px; align-items:stretch;">
+            <div style="flex:1; border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:14px 16px; display:flex; flex-direction:row; gap:12px; align-items:center;">
+              <span style="width:11px; height:11px; flex-shrink:0; background:rgb(9,124,90);"></span>
+              <span style="font-size:16px; line-height:1.35; color:rgb(53,59,71);">Percent of students that are likely to be successful with key learning components during instruction</span>
+            </div>
+            <div style="flex:1; border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:14px 16px; display:flex; flex-direction:row; gap:12px; align-items:center;">
+              <span style="width:11px; height:11px; flex-shrink:0; background:rgb(182,74,141);"></span>
+              <span style="font-size:16px; line-height:1.35; color:rgb(53,59,71);">Percent of students that are likely to need extra support with key learning components during instruction</span>
+            </div>
+          </div>
+
+          <!-- TABS -->
+          <div style="align-self:stretch; display:flex; flex-direction:row; align-items:flex-end; border-bottom:1px solid rgb(213,217,226);">
+            <div onClick="{{ pickOverall }}" style="padding:10px 4px 12px; margin-right:24px; border-bottom:3px solid {{ tabOverallBorder }}; cursor:pointer;"><span style="font-size:18px; font-weight:{{ tabOverallWeight }}; color:{{ tabOverallColor }};">Overall Distributions</span></div>
+            <div onClick="{{ pickBreakdown }}" style="padding:10px 4px 12px; border-bottom:3px solid {{ tabBreakdownBorder }}; cursor:pointer;"><span style="font-size:18px; font-weight:{{ tabBreakdownWeight }}; color:{{ tabBreakdownColor }};">Breakdown by Learning Component</span></div>
+          </div>
+
+          <!-- FILTERS -->
+          <div style="align-self:stretch; display:flex; flex-direction:row; flex-wrap:wrap; gap:12px; row-gap:12px; align-items:flex-end;">
+            <div style="display:flex; flex-direction:column; gap:6px; width:130px;">
+              <span style="font-size:14px; color:rgb(103,112,125);">School</span>
+              <div style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255);" style-hover="border-color:rgb(34,126,167);">
+                <span style="color:rgb(53,59,71);">All Schools</span>
+                <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px; width:125px;">
+              <span style="font-size:14px; color:rgb(103,112,125);">Grade</span>
+              <div style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255);" style-hover="border-color:rgb(34,126,167);">
+                <span style="color:rgb(53,59,71);">All Grades</span>
+                <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+              </div>
+            </div>
+            <div style="height:37px; border:1px solid rgb(34,126,167); border-radius:6px; padding:0 14px; display:flex; align-items:center; font-weight:700; font-size:16px; color:rgb(34,126,167); cursor:pointer; user-select:none;" style-hover="background:rgb(240,248,251);">Demographic Filters</div>
+            <div style="height:37px; background:rgb(34,126,167); border-radius:6px; padding:0 20px; display:flex; align-items:center; font-weight:700; font-size:16px; color:rgb(255,255,255); cursor:pointer; user-select:none;" style-hover="background:rgb(27,101,134);">View</div>
+            <div style="height:37px; display:flex; align-items:center; padding:0 6px;"><a href="#" style="font-size:16px; font-weight:700; white-space:nowrap;">Reset Filters</a></div>
+          </div>
+
+          <div style="align-self:stretch; height:1px; background:rgb(213,217,226);"></div>
+
+          <span style="font-weight:700; font-size:22px; color:rgb(53,59,71);">Overall Distributions</span>
+
+          <!-- OVERALL BAR CARD -->
+          <div style="align-self:stretch; border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:24px; display:flex; flex-direction:column; gap:16px;">
+            <span style="font-size:16px; color:rgb(53,59,71); text-align:center;">{{ overallHeadline }}</span>
+            <div style="align-self:stretch; display:flex; flex-direction:row; height:14px; overflow:hidden; border-radius:2px;">
+              <div style="width:50%; background:rgb(9,124,90);"></div>
+              <div style="flex:1; background:rgb(182,74,141);"></div>
+            </div>
+            <div style="align-self:stretch; display:flex; flex-direction:row; justify-content:space-between; align-items:center;">
+              <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                <span style="width:10px; height:10px; flex-shrink:0; background:rgb(9,124,90);"></span>
+                <span style="font-size:15px; color:rgb(53,59,71);">X% of students (X) are likely to be successful</span>
+              </div>
+              <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                <span style="width:10px; height:10px; flex-shrink:0; background:rgb(182,74,141);"></span>
+                <span style="font-size:15px; color:rgb(53,59,71);">X% of students (X) are likely to need extra support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GROUP BY -->
+          <div style="display:flex; flex-direction:row; gap:12px; align-items:center;">
+            <span style="font-size:16px; color:rgb(53,59,71);">Group by</span>
+            <div style="display:flex; flex-direction:row; gap:0; border-radius:4px; overflow:hidden; background:rgb(233,236,240);">
+              <div onClick="{{ pickSchool }}" style="padding:8px 16px; font-size:16px; font-weight:{{ schoolWeight }}; background:{{ schoolBg }}; color:{{ schoolColor }}; cursor:pointer; user-select:none;">School</div>
+              <div onClick="{{ pickGrade }}" style="padding:8px 16px; font-size:16px; font-weight:{{ gradeWeight }}; background:{{ gradeBg }}; color:{{ gradeColor }}; cursor:pointer; user-select:none;">Grade</div>
+            </div>
+          </div>
+
+          <!-- GROUPED ROWS -->
+          <div style="align-self:stretch; border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:24px; display:flex; flex-direction:column; gap:20px;">
+            <sc-for list="{{ rows }}" as="r" hint-placeholder-count="7">
+              <div style="display:flex; flex-direction:row; gap:24px; align-items:center;">
+                <span style="width:150px; flex-shrink:0; text-align:right; font-weight:700; font-size:16px; color:rgb(53,59,71);">{{ r.label }}</span>
+                <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:6px;">
+                  <div style="display:flex; flex-direction:row; height:14px; overflow:hidden; border-radius:2px;">
+                    <div style="width:{{ r.pct }}; background:rgb(9,124,90);"></div>
+                    <div style="flex:1; background:rgb(182,74,141);"></div>
+                  </div>
+                  <div style="display:flex; flex-direction:row; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                      <span style="width:10px; height:10px; flex-shrink:0; background:rgb(9,124,90);"></span>
+                      <span style="font-size:15px; color:rgb(53,59,71);">X% (X)</span>
+                    </div>
+                    <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                      <span style="width:10px; height:10px; flex-shrink:0; background:rgb(182,74,141);"></span>
+                      <span style="font-size:15px; color:rgb(53,59,71);">X% (X)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="align-self:stretch; display:flex; flex-direction:row; align-items:center; gap:16px; padding:16px 64px; background:rgb(246,247,249); border-top:1px solid rgb(222,226,230);">
+    <a href="#" style="font-size:14px;">Privacy Policy</a>
+    <a href="#" style="font-size:14px;">Terms of Use</a>
+    <a href="#" style="font-size:14px;">Student Privacy</a>
+    <span style="font-size:14px; color:rgb(109,109,109);">© 2026 The Achievement Network, Ltd. All Rights Reserved.</span>
+    <img src="assets/myanet-logo.png" alt="ANet" style="height:28px; object-fit:contain; margin-left:auto;">
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { groupBy: 'grade', tab: 'overall' };
+  renderVals() {
+    const g = this.state.groupBy;
+    const active = { bg: 'rgb(34,126,167)', color: 'rgb(255,255,255)', weight: '700' };
+    const idle = { bg: 'rgb(233,236,240)', color: 'rgb(103,112,125)', weight: '400' };
+    const s = g === 'school' ? active : idle;
+    const gr = g === 'grade' ? active : idle;
+    const gradeRows = [
+      { label: 'Grade 2', pct: '80%' }, { label: 'Grade 3', pct: '41%' },
+      { label: 'Grade 4', pct: '73%' }, { label: 'Grade 5', pct: '21%' },
+      { label: 'Grade 6', pct: '73%' }, { label: 'Grade 7', pct: '41%' },
+      { label: 'Grade 8', pct: '21%' }
+    ];
+    const schoolRows = [
+      { label: 'School A', pct: '80%' }, { label: 'School B', pct: '41%' }, { label: 'School C', pct: '73%' }
+    ];
+    const t = this.state.tab;
+    return {
+      rows: g === 'school' ? schoolRows : gradeRows,
+      overallHeadline: 'X% of students (X) are likely to be successful with key learning components during instruction.',
+      schoolBg: s.bg, schoolColor: s.color, schoolWeight: s.weight,
+      gradeBg: gr.bg, gradeColor: gr.color, gradeWeight: gr.weight,
+      pickSchool: () => this.setState({ groupBy: 'school' }),
+      pickGrade: () => this.setState({ groupBy: 'grade' }),
+      pickOverall: () => this.setState({ tab: 'overall' }),
+      pickBreakdown: () => this.setState({ tab: 'breakdown' }),
+      tabOverallBorder: t === 'overall' ? 'rgb(34,126,167)' : 'transparent',
+      tabOverallColor: t === 'overall' ? 'rgb(34,126,167)' : 'rgb(53,59,71)',
+      tabOverallWeight: t === 'overall' ? '700' : '400',
+      tabBreakdownBorder: t === 'breakdown' ? 'rgb(34,126,167)' : 'transparent',
+      tabBreakdownColor: t === 'breakdown' ? 'rgb(34,126,167)' : 'rgb(53,59,71)',
+      tabBreakdownWeight: t === 'breakdown' ? '700' : '400'
+    };
+  }
+}
+</script>
+</body>
+</html>

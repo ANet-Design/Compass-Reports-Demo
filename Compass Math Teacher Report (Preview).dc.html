@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: rgb(226,230,236); font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(53,59,71); }
+  a { color: rgb(0,120,163); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ol, ul { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="display:flex; flex-direction:column; align-items:center; width:100%; max-width:1600px; margin:0 auto; background:rgb(255,255,255);" data-screen-label="Math Teacher Report">
+
+  <!-- SCREEN -->
+  <div style="align-self:stretch; background:rgb(255,255,255); display:flex; flex-direction:column; gap:16px; padding:32px 64px;">
+
+    <!-- MAIN NAV -->
+    <div style="align-self:stretch; display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; flex-direction:row; gap:16px; justify-content:flex-end; align-items:center;">
+        <span style="font-size:16px; color:rgb(53,59,71);">Welcome, Alicia</span>
+        <a href="#">Log Out</a>
+      </div>
+      <div style="display:flex; flex-direction:row; gap:24px; align-items:flex-end;">
+        <img src="assets/myanet-logo.png" alt="myANet" style="width:140px; height:49px; object-fit:contain; flex-shrink:0;">
+        <span style="font-weight:700; font-size:36px; line-height:28px; color:rgb(53,59,71); white-space:nowrap;">ANet Demo School</span>
+        <a href="#">Change Selection</a>
+      </div>
+      <div style="display: flex; flex-direction: row; align-items: flex-end; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(213,217,226); background: rgb(255,255,255)">
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Dashboard</span></div>
+        <div style="padding: 14px 15.75px; border-style: solid; border-color: #247EA7; border-top-width: 0px; border-right-width: 0px; border-left-width: 0px; border-bottom-width: 2px; padding-top: 15px; padding-bottom: 15px; padding-left: 16px; padding-right: 16px"><span style="font-size: 16px; white-space: nowrap; color: #227EA7; font-weight: 600">Performance</span></div>
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Standards</span></div>
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Assessments</span></div>
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Quiz Tool</span></div>
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Assignments</span></div>
+        <div style="padding: 14px 15.75px; border-right: 1px dashed rgb(213,217,226); border-style: none"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Students</span></div>
+        <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Users</span></div>
+      </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="display:flex; flex-direction:row; gap:16px; align-items:flex-start; align-self:stretch;">
+
+      <!-- SIDEBAR -->
+      <div style="width: 260px; flex-shrink: 0; border-radius: 4px; background: rgb(255,255,255); outline: 1px solid rgb(213,217,226); display: flex; flex-direction: column; padding: 3.5px; gap: 2px; align-self: flex-start">
+        <div style="padding:6px 8px 2px; display:flex; flex-direction:row; align-items:center; gap:8px;"><span style="width:14px; height:14px; flex-shrink:0; color:rgb(148,163,184); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><rect x="0" y="0" width="1.273" height="14" rx="0.636" fill="currentColor"></rect><rect x="0" y="12.727" width="14" height="1.273" rx="0.636" fill="currentColor"></rect><rect x="2.97" y="6.364" width="1.273" height="4.666" rx="0.636" fill="currentColor"></rect><rect x="5.939" y="2.97" width="1.273" height="8.06" rx="0.636" fill="currentColor"></rect><rect x="8.909" y="6.364" width="1.273" height="4.666" rx="0.636" fill="currentColor"></rect><rect x="11.879" y="2.97" width="1.273" height="8.06" rx="0.636" fill="currentColor"></rect></svg></span><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Performance Reports</span></div>
+        <a href="Compass Math Teacher Report.dc.html" style="border-radius:4px; padding:7px 10px; text-decoration:none;" style-hover="background:rgb(246,247,249);"><span style="font-size:16px; color:rgb(53,59,71);">Math Teacher Report</span></a>
+        <div style="border-radius:4px; background:rgb(68,78,96); padding:7px 10px;"><span style="font-size:16px; color:rgb(255,255,255);">Math Teacher Report (Preview)</span></div>
+        <a href="Compass Math Multi-School Diagnostic Report.dc.html" style="border-radius:4px; padding:7px 10px; text-decoration:none; display:none;" style-hover="background:rgb(246,247,249);"><span style="font-size:16px; color:rgb(53,59,71);">Math Multi-School Diagnostic Report (Preview)</span></a>
+        
+        <div style="padding: 6px 8px 2px; display: none"><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Data Meeting</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">ELA</span></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div style="padding:6px 8px 2px; display:flex; flex-direction:row; align-items:center; gap:8px;"><span style="width:14px; height:14px; flex-shrink:0; color:rgb(148,163,184); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 2.292 14 L 2.291 14 C 1.679 14 1.104 13.761 0.671 13.328 C -0.223 12.434 -0.224 10.981 0.669 10.088 L 5.076 5.681 C 4.672 4.13 5.111 2.456 6.244 1.323 C 7.388 0.179 9.069 -0.268 10.629 0.159 C 10.835 0.215 10.996 0.376 11.05 0.584 C 11.105 0.791 11.045 1.011 10.894 1.162 L 8.933 3.122 L 9.351 4.649 L 10.877 5.066 L 12.837 3.106 C 12.989 2.956 13.209 2.894 13.416 2.951 C 13.622 3.005 13.785 3.166 13.841 3.372 C 14.267 4.932 13.821 6.612 12.677 7.757 C 11.544 8.889 9.869 9.325 8.318 8.924 L 3.911 13.33 C 3.479 13.762 2.904 14 2.292 14 Z M 9.145 1.214 C 8.381 1.282 7.65 1.614 7.092 2.172 C 6.18 3.085 5.884 4.417 6.32 5.652 C 6.397 5.869 6.342 6.113 6.179 6.276 L 1.518 10.937 C 1.093 11.362 1.094 12.054 1.52 12.48 C 1.726 12.686 2 12.8 2.292 12.8 L 2.292 12.8 C 2.584 12.8 2.857 12.686 3.063 12.482 L 7.724 7.821 C 7.888 7.657 8.13 7.602 8.348 7.679 C 9.584 8.113 10.917 7.821 11.829 6.908 C 12.387 6.349 12.719 5.618 12.787 4.854 L 11.48 6.161 C 11.328 6.313 11.105 6.372 10.897 6.316 L 8.704 5.717 C 8.5 5.661 8.34 5.501 8.284 5.297 L 7.684 3.104 C 7.627 2.896 7.686 2.673 7.838 2.521 L 9.145 1.214 Z" fill="currentColor" fill-rule="evenodd"></path></svg></span><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Tools and Resources</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Manage Custom Groups</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Data Export</span></div>
+        <div style="padding:7px 10px;"><span style="font-size:16px; color:rgb(53,59,71);">Helpful Resources</span></div>
+      </div>
+
+      <!-- GRAY CONTAINER -->
+      <div style="flex-grow:1; min-width:0; border-radius:4px; background:rgb(246,247,249); display:flex; flex-direction:row; padding:16px; align-items:flex-start; position:relative;">
+
+        <!-- WHITE CONTAINER -->
+        <div style="flex-grow:1; min-width:0; overflow:visible; border-radius:4px; background:rgb(255,255,255); display:flex; flex-direction:column; gap:24px; padding:24px 0; align-items:flex-start; position:relative;">
+
+          <!-- FILTERS -->
+          <div style="align-self:stretch; display:flex; flex-direction:column; gap:8px; padding:0 16px; position:relative; z-index:20;">
+            <div style="display:flex; flex-direction:row; gap:8px; align-items:flex-end;">
+              <!-- GRADE -->
+              <div style="display:flex; flex-direction:column; gap:6px; width:110px; position:relative;">
+                <span style="font-size:14px; color:rgb(103,112,125);">Grade</span>
+                <div onClick="{{ toggleGrade }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255); transition:border-color 0.15s;" style-hover="border-color:rgb(34,126,167);">
+                  <span style="color:{{ gradeColor }};">{{ gradeText }}</span>
+                  <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+                </div>
+                <sc-if value="{{ gradeOpen }}">
+                  <div style="position:absolute; top:65px; left:0; width:150px; max-height:260px; overflow:auto; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
+                    <sc-for list="{{ gradeOptions }}" as="o" hint-placeholder-count="7">
+                      <div onClick="{{ o.onClick }}" style="padding:8px 12px; font-size:16px; color:rgb(53,59,71); cursor:pointer;" style-hover="background:rgb(246,247,249);">{{ o.label }}</div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+              <!-- PERIOD -->
+              <div style="display:flex; flex-direction:column; gap:6px; width:142px; position:relative;">
+                <span style="font-size:14px; color:rgb(103,112,125);">Period</span>
+                <div onClick="{{ togglePeriod }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255); opacity:{{ periodOpacity }}; transition:border-color 0.15s;" style-hover="border-color:rgb(34,126,167);">
+                  <span style="color:{{ periodColor }};">{{ periodText }}</span>
+                  <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+                </div>
+                <sc-if value="{{ periodOpen }}">
+                  <div style="position:absolute; top:65px; left:0; width:190px; max-height:260px; overflow:auto; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
+                    <sc-for list="{{ periodOptions }}" as="o" hint-placeholder-count="1">
+                      <div onClick="{{ o.onClick }}" style="padding:8px 12px; font-size:16px; color:rgb(53,59,71); cursor:pointer;" style-hover="background:rgb(246,247,249);">{{ o.label }}</div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+              <!-- CYCLE -->
+              <div style="display:flex; flex-direction:column; gap:6px; width:137px; position:relative;">
+                <span style="font-size:14px; color:rgb(103,112,125);">Cycle</span>
+                <div onClick="{{ toggleCycle }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255); opacity:{{ cycleOpacity }}; transition:border-color 0.15s;" style-hover="border-color:rgb(34,126,167);">
+                  <span style="color:{{ cycleColor }};">{{ cycleText }}</span>
+                  <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+                </div>
+                <sc-if value="{{ cycleOpen }}">
+                  <div style="position:absolute; top:65px; left:0; width:160px; max-height:260px; overflow:auto; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
+                    <sc-for list="{{ cycleOptions }}" as="o" hint-placeholder-count="8">
+                      <div onClick="{{ o.onClick }}" style="padding:8px 12px; font-size:16px; color:rgb(53,59,71); cursor:pointer;" style-hover="background:rgb(246,247,249);">{{ o.label }}</div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+              <div onClick="{{ applyView }}" style="color: rgb(255,255,255); border-radius: 6px; height: 37px; padding: 0 18px; display: flex; align-items: center; font-size: 16px; cursor: pointer; user-select: none; transition: background 0.15s; background-color: #227EA7" style-hover="background:rgb(27,101,134);">View</div>
+            </div>
+            <div style="align-self:stretch; height:1px; background:rgb(213,217,226); margin-top:14px;"></div>
+          </div>
+
+          <!-- TITLE -->
+          <div style="align-self:stretch; padding:0 16px; display:flex; flex-direction:row; gap:12px; align-items:center;">
+            <span style="font-size: 30px; color: rgb(53,59,71); font-weight: 600">{{ reportTitle }}</span>
+            <span style="flex-shrink:0; display:inline-flex; align-items:center; gap:6px; background:rgb(253,246,205); color:rgb(133,100,4); border:1px solid rgb(240,207,72); border-radius:999px; padding:4px 14px; font-size:14px; font-weight:700; letter-spacing:0.02em;">Preview</span>
+          </div>
+
+          <!-- INNER TABS -->
+          <div style="align-self:stretch; position:relative;">
+            <div style="display: flex; flex-direction: row; align-items: flex-end; background: rgb(255,255,255); border-bottom-style: solid; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(213,217,226)">
+              <div onClick="{{ goPrepare }}" style="display: flex; flex-direction: row; gap: 8px; padding: 14px 15.75px; align-items: center; cursor: pointer; transition: background 0.15s; margin-bottom:-1px; {{ prepTabBorder }}" style-hover="background:rgb(246,247,249);">
+                <span style="width: 14px; height: 14px; color: rgb(16,185,129); display: none"><svg viewBox="0 0 14 14" width="100%" height="100%" style="display: none"><path d="M 4.162 1.514 L 4.162 0.568 C 4.162 0.254 3.908 0 3.595 0 C 3.281 0 3.027 0.254 3.027 0.568 L 3.027 1.514 L 2.081 1.514 C 0.932 1.514 0 2.445 0 3.595 L 0 11.919 C 0 13.068 0.932 14 2.081 14 L 9.649 14 C 10.798 14 11.73 13.068 11.73 11.919 L 11.73 3.595 C 11.73 2.445 10.798 1.514 9.649 1.514 L 8.703 1.514 L 8.703 0.568 C 8.703 0.254 8.449 0 8.135 0 C 7.822 0 7.568 0.254 7.568 0.568 L 7.568 1.514 L 4.162 1.514 Z M 1.135 6.811 L 10.595 6.811 L 10.595 11.919 C 10.595 12.441 10.171 12.865 9.649 12.865 L 2.081 12.865 C 1.559 12.865 1.135 12.441 1.135 11.919 L 1.135 6.811 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 1.135 0)"></path></svg></span>
+                <span style="font-size: 16px; white-space: nowrap; color: {{ prepTabColor }}; font-weight: {{ prepTabWeight }}">Prepare for Instruction</span>
+              </div>
+              <sc-if value="{{ hasReview }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ goReview }}" style="display: flex; flex-direction: row; gap: 8px; padding: 14px 15.75px; align-items: center; cursor: pointer; transition: background 0.15s; margin-bottom:-1px; {{ revTabBorder }}" style-hover="background:rgb(246,247,249);">
+                <span style="font-size: 16px; white-space: nowrap; color: {{ revTabColor }}; font-weight: {{ revTabWeight }}">Review Performance</span>
+              </div>
+              </sc-if>
+              
+              
+            </div>
+            <!-- TOOLTIP -->
+            <sc-if value="{{ showTooltipPrep }}" hint-placeholder-val="{{ true }}">
+              <div style="position: absolute; top: 56px; left: 8px; z-index: 5; display: none; flex-direction: column; align-items: flex-start">
+                <div style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:6px solid rgb(68,78,96); margin-left:24px;"></div>
+                <div style="border-radius: 8px; background: rgb(68,78,96); box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1); display: flex; flex-direction: row; gap: 12px; padding: 9px 12px; align-items: center">
+                  <span style="font-size:15px; color:rgb(255,255,255); line-height:1.35;">View predictions <i>before</i> administering this cycle</span>
+                  <span onClick="{{ dismissTooltip }}" style="width:14px; height:14px; flex-shrink:0; color:rgb(255,255,255); cursor:pointer; display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 0.212 0.212 C 0.495 -0.071 0.953 -0.071 1.235 0.212 L 5.5 4.477 L 9.765 0.212 C 10.047 -0.071 10.505 -0.071 10.788 0.212 C 11.071 0.495 11.071 0.953 10.788 1.235 L 6.523 5.5 L 10.788 9.765 C 11.071 10.047 11.071 10.505 10.788 10.788 C 10.505 11.071 10.047 11.071 9.765 10.788 L 5.5 6.523 L 1.235 10.788 C 0.953 11.071 0.495 11.071 0.212 10.788 C -0.071 10.505 -0.071 10.047 0.212 9.765 L 4.477 5.5 L 0.212 1.235 C -0.071 0.953 -0.071 0.495 0.212 0.212 Z" fill="currentColor" transform="matrix(1 0 0 1 1.5 1.5)"></path></svg></span>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ showTooltipRev }}">
+              <div style="position: absolute; top: 56px; left: 170px; z-index: 5; display: none; flex-direction: column; align-items: flex-start">
+                <div style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:6px solid rgb(68,78,96); margin-left:24px;"></div>
+                <div style="border-radius:8px; background:rgb(68,78,96); box-shadow:0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1); display:flex; flex-direction:row; gap:12px; padding:9px 12px; align-items:center;">
+                  <span style="font-size:15px; color:rgb(255,255,255); line-height:1.35;">Analyze results <i>after</i> administering this cycle</span>
+                  <span onClick="{{ dismissTooltip }}" style="width:14px; height:14px; flex-shrink:0; color:rgb(255,255,255); cursor:pointer; display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 0.212 0.212 C 0.495 -0.071 0.953 -0.071 1.235 0.212 L 5.5 4.477 L 9.765 0.212 C 10.047 -0.071 10.505 -0.071 10.788 0.212 C 11.071 0.495 11.071 0.953 10.788 1.235 L 6.523 5.5 L 10.788 9.765 C 11.071 10.047 11.071 10.505 10.788 10.788 C 10.505 11.071 10.047 11.071 9.765 10.788 L 5.5 6.523 L 1.235 10.788 C 0.953 11.071 0.495 11.071 0.212 10.788 C -0.071 10.505 -0.071 10.047 0.212 9.765 L 4.477 5.5 L 0.212 1.235 C -0.071 0.953 -0.071 0.495 0.212 0.212 Z" fill="currentColor" transform="matrix(1 0 0 1 1.5 1.5)"></path></svg></span>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+
+          <!-- =========== PREPARE PANEL =========== -->
+          <sc-if value="{{ isPrepare }}" hint-placeholder-val="{{ true }}">
+          <div style="align-self:stretch; display:flex; flex-direction:column; gap:40px;">
+
+            <div style="align-self:stretch; display:flex; flex-direction:column; gap:24px; padding:0 16px; align-items:center;">
+              <div style="align-self:stretch; display:flex; flex-direction:column; gap:8px;">
+                <span style="font-weight:700; font-size:22px; color:rgb(53,59,71);">Prepare for Instruction</span>
+                <span style="font-size:16px; color:rgb(109,109,109); line-height:1.4; text-wrap:pretty;">Before the cycle, review your upcoming curricular materials, and reflect on class and student predictions about key learning components.</span>
+              </div>
+              <div style="align-self: stretch; border-radius: 4px; background: rgb(229,242,249); box-shadow: inset 0 0 0 1px rgb(34,126,167); padding: 20px 24px; display: none; flex-direction: column; gap: 12px">
+                <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">How to Use This Report</span>
+                <ol style="margin:0; padding-left:22px; display:flex; flex-direction:column; gap:6px; font-size:16px; color:rgb(53,59,71); line-height:1.45;">
+                  <li>Before the cycle, review your upcoming curricular materials and reflect on predictions about key learning components.</li>
+                  <li>Use the <strong>Learning Component Map</strong> and Instructional Moves to inform instructional pacing and strategies.</li>
+                  <li>Create a lesson plan that leverages student strengths and provides targeted support.</li>
+                </ol>
+                <span style="font-size:16px; color:rgb(53,59,71); line-height:1.45;">For more information on how to use this data, read the <a href="https://docs.google.com/document/d/1zm7av2oT9lRcAOWo72TzIoAhuBavWIvGBmRcfo1I7GE/edit?tab=t.a0majods82wo" target="_blank" rel="noopener noreferrer">Data Analysis Guide</a>.</span>
+              </div>
+            </div>
+
+            <div style="align-self:stretch; display:flex; flex-direction:column; gap:24px; padding:0 16px;">
+              <div style="align-self:stretch; border-radius:4px; background:rgb(255,255,255); box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:24px; display:flex; flex-direction:column; gap:16px;">
+                <div style="display:flex; flex-direction:row; gap:8px; justify-content:center; align-items:center;">
+                  <span style="font-weight: 700; font-size: 16px; color: #353B47">{{ overallText }}</span>
+                  <span onClick="{{ openData }}" style="width:14px; height:14px; color:rgb(53,59,71); cursor:pointer; display:inline-flex; transition:color 0.15s;" style-hover="color:rgb(34,126,167);"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 7 0 C 3.134 0 0 3.134 0 7 C 0 10.866 3.134 14 7 14 C 10.866 14 14 10.866 14 7 C 14 3.134 10.866 0 7 0 Z M 7 1.167 C 10.222 1.167 12.833 3.778 12.833 7 C 12.833 10.222 10.222 12.833 7 12.833 C 3.778 12.833 1.167 10.222 1.167 7 C 1.167 3.778 3.778 1.167 7 1.167 Z M 7 2.917 C 5.605 2.917 4.472 4.049 4.472 5.444 C 4.472 5.767 4.733 6.028 5.056 6.028 C 5.378 6.028 5.639 5.767 5.639 5.444 C 5.639 4.694 6.25 4.083 7 4.083 C 7.75 4.083 8.361 4.694 8.361 5.444 C 8.361 6.195 7.75 6.806 7 6.806 C 6.678 6.806 6.417 7.067 6.417 7.389 L 6.417 8.167 C 6.417 8.489 6.678 8.75 7 8.75 C 7.322 8.75 7.583 8.489 7.583 8.167 L 7.583 7.905 C 8.71 7.641 9.528 6.63 9.528 5.444 C 9.528 4.049 8.395 2.917 7 2.917 Z M 7 9.528 C 6.572 9.528 6.222 9.878 6.222 10.306 C 6.222 10.733 6.572 11.083 7 11.083 C 7.428 11.083 7.778 10.733 7.778 10.306 C 7.778 9.878 7.428 9.528 7 9.528 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                </div>
+                <div style="align-self:stretch; height:16px; overflow:hidden; border-radius:4px; background:rgb(246,247,249); display:flex; flex-direction:row;">
+                  <div style="width:{{ successBarPct }}; background:rgb(4,120,87);"></div>
+                  <div style="width:{{ supportBarPct }}; background:rgb(173,75,140);"></div>
+                </div>
+                <div style="display:flex; flex-direction:row; justify-content:space-between; align-items:flex-start;">
+                  <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                    <div style="width:12px; height:12px; background:rgb(4,120,87);"></div>
+                    <span style="font-size:14px; color:rgb(53,59,71);">{{ successLegend }}</span>
+                  </div>
+                  <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                    <div style="width:12px; height:12px; background:rgb(173,75,140);"></div>
+                    <span style="font-size:14px; color:rgb(53,59,71);">{{ supportLegend }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="align-self:stretch; height:1px; background:rgb(213,217,226);"></div>
+              <!-- 1. Plan Class-Level Support -->
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <span style="font-weight:700; font-size:20px; color:rgb(53,59,71);">1. Plan Class-Level Support</span>
+                <span style="font-size:16px; color:rgb(53,59,71); line-height:1.35;">Adjust lesson pacing and strategies based on class predictions.</span>
+              </div>
+
+              <div style="align-self:stretch; display:flex; flex-direction:row; gap:16px; align-items:flex-start;">
+                <!-- continue with regular instruction -->
+                <div style="flex: 1; border-radius: 4px; box-shadow: inset 0 0 0 1px rgb(213,217,226); padding: 24px; display: flex; flex-direction: column; gap: 24px; background-color: #F6F7F9">
+                  <div style="display:flex; flex-direction:column; gap:8px;">
+                    <span style="font-weight:700; font-size:18px; color:rgb(53,59,71);">Continue with regular instruction</span>
+                    <span style="font-size:16px; color:rgb(109,109,109); line-height:1.35;">This list of learning components is ranked, starting with the top predicted strength.</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:16px;">
+                    <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
+                      <div style="border-radius:4px; background:rgb(255,255,255); box-shadow:inset 0 0 0 1px {{ s.border }}; padding:16px; display:flex; flex-direction:column; gap:16px;">
+                        <sc-if value="{{ s.first }}">
+                          <div style="align-self:flex-start; display:inline-flex; flex-direction:row; gap:4px; align-items:center; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:4px; padding:3.5px 7px;">
+                            <span style="width:10.5px; height:10.5px; flex-shrink:0; color:rgb(53,59,71); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 7.514 0.32 C 7.417 0.124 7.218 0 7 0 C 6.782 0 6.583 0.124 6.486 0.32 L 4.633 4.076 L 0.491 4.675 C 0.275 4.706 0.096 4.857 0.028 5.065 C -0.039 5.272 0.017 5.5 0.173 5.652 L 3.167 8.575 L 2.461 12.704 C 2.425 12.919 2.513 13.136 2.689 13.264 C 2.866 13.392 3.1 13.409 3.293 13.308 L 7 11.361 L 10.707 13.308 C 10.9 13.409 11.134 13.392 11.311 13.264 C 11.487 13.136 11.575 12.919 11.539 12.704 L 10.833 8.575 L 13.827 5.652 C 13.983 5.5 14.039 5.272 13.972 5.065 C 13.904 4.857 13.725 4.706 13.509 4.675 L 9.367 4.076 L 7.514 0.32 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 0 0.313)"></path></svg></span>
+                            <span style="font-size:14px; font-weight:700; color:rgb(53,59,71);">Top Strength</span>
+                          </div>
+                        </sc-if>
+                        <div style="display:flex; flex-direction:row; gap:16px; align-items:center;">
+                          <span style="flex-shrink:0; width:24px; height:24px; border-radius:50%; background:rgb(34,126,167); color:rgb(255,255,255); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center;">{{ s.n }}</span>
+                          <span style="font-size:16px; color:rgb(53,59,71); line-height:1.35;">{{ s.lc }}</span>
+                        </div>
+                      </div>
+                    </sc-for>
+                    <sc-if value="{{ noStrengths }}">
+                      <span style="font-size:16px; color:rgb(109,109,109); font-style:italic;">No predicted strengths for this cycle.</span>
+                    </sc-if>
+                  </div>
+                </div>
+                <!-- provide extra support during instruction -->
+                <div style="flex:1; border-radius:4px; background:rgb(246,247,249); box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:24px; display:flex; flex-direction:column; gap:24px;">
+                  <div style="display:flex; flex-direction:column; gap:8px;">
+                    <span style="font-weight:700; font-size:18px; color:rgb(53,59,71);">Provide extra support during instruction</span>
+                    <span style="font-size:16px; color:rgb(109,109,109); line-height:1.35;">This list of learning components is ranked, starting with the top predicted challenge.</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:16px;">
+                    <sc-for list="{{ challenges }}" as="c" hint-placeholder-count="2">
+                      <div style="border-radius:4px; background:rgb(255,255,255); box-shadow:inset 0 0 0 1px {{ c.border }}; padding:16px; display:flex; flex-direction:column; gap:16px;">
+                        <sc-if value="{{ c.first }}">
+                          <div style="align-self:flex-start; display:inline-flex; flex-direction:row; gap:4px; align-items:center; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:4px; padding:3.5px 7px;">
+                            <span style="width:10.5px; height:10.5px; flex-shrink:0; color:rgb(53,59,71); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M3 1 C3 0.6 2.7 0.3 2.3 0.3 C1.9 0.3 1.6 0.6 1.6 1 L1.6 13 C1.6 13.4 1.9 13.7 2.3 13.7 C2.7 13.7 3 13.4 3 13 L3 8 L11 8 C11.3 8 11.6 7.8 11.7 7.5 C11.8 7.2 11.7 6.9 11.5 6.7 L9.4 4.5 L11.5 2.3 C11.7 2.1 11.8 1.8 11.7 1.5 C11.6 1.2 11.3 1 11 1 L3 1 Z" fill="currentColor"></path></svg></span>
+                            <span style="font-size:14px; font-weight:700; color:rgb(53,59,71);">Top Challenge</span>
+                          </div>
+                        </sc-if>
+                        <div style="display:flex; flex-direction:row; gap:16px; align-items:center;">
+                          <span style="flex-shrink:0; width:24px; height:24px; border-radius:50%; background:rgb(34,126,167); color:rgb(255,255,255); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center;">{{ c.n }}</span>
+                          <span style="font-size:16px; color:rgb(53,59,71); line-height:1.35;">{{ c.lc }}</span>
+                        </div>
+                      </div>
+                    </sc-for>
+                    <sc-if value="{{ noChallenges }}">
+                      <span style="font-size:16px; color:rgb(109,109,109); font-style:italic;">No predicted challenges for this cycle.</span>
+                    </sc-if>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Learning Component Map banner -->
+              <div style="align-self:stretch; border-radius:4px; background:rgb(229,242,249); box-shadow:inset 0 0 0 1px rgb(34,126,167); padding:16px; display:flex; flex-direction:row; gap:8px; align-items:center;">
+                <div style="width:40px; height:40px; flex-shrink:0; border-radius:50%; background:rgb(255,255,255); display:flex; align-items:center; justify-content:center;">
+                  <span style="width:14px; height:14px; color:rgb(34,126,167); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 7.514 0.32 C 7.417 0.124 7.218 0 7 0 C 6.782 0 6.583 0.124 6.486 0.32 L 4.633 4.076 L 0.491 4.675 C 0.275 4.706 0.096 4.857 0.028 5.065 C -0.039 5.272 0.017 5.5 0.173 5.652 L 3.167 8.575 L 2.461 12.704 C 2.425 12.919 2.513 13.136 2.689 13.264 C 2.866 13.392 3.1 13.409 3.293 13.308 L 7 11.361 L 10.707 13.308 C 10.9 13.409 11.134 13.392 11.311 13.264 C 11.487 13.136 11.575 12.919 11.539 12.704 L 10.833 8.575 L 13.827 5.652 C 13.983 5.5 14.039 5.272 13.972 5.065 C 13.904 4.857 13.725 4.706 13.509 4.675 L 9.367 4.076 L 7.514 0.32 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 0 0.313)"></path></svg></span>
+                </div>
+                <span style="flex-grow: 1; font-weight: 400; font-size: 16px; color: rgb(53,59,71); line-height: 1.35">Use the <b>Learning Component Map</b> to find focus lessons from your curriculum and misconception strategies for each learning component.</span>
+                <div onClick="{{ openResources }}" style="background:rgb(34,126,167); color:rgb(255,255,255); border-radius:6px; height:37px; padding:0 18px; display:flex; align-items:center; align-self:center; flex-shrink:0; font-weight:700; font-size:16px; cursor:pointer; user-select:none; transition:background 0.15s;" style-hover="background:rgb(27,101,134);">View Map</div>
+              </div>
+            </div>
+            <!-- ===== PLAN STUDENT-LEVEL SUPPORT ===== -->
+            <div style="align-self:stretch; display:flex; flex-direction:column; gap:24px; padding:0 16px;">
+              <div style="align-self:stretch; height:1px; background:rgb(213,217,226);"></div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <span style="font-weight:700; font-size:20px; color:rgb(53,59,71);">2. Plan Student-Level Support</span>
+                <span style="font-size: 16px; color: #353B47; line-height: 1.35">After planning class-level support, use student predictions to create small groups and inform differentiated teaching.</span>
+              </div>
+
+              <!-- Strategy banner -->
+              <div style="align-self:stretch; border-radius:4px; background:rgb(229,242,249); box-shadow:inset 0 0 0 1px rgb(34,126,167); padding:20px 24px; display:flex; flex-direction:row; gap:24px; align-items:stretch;">
+                <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
+                  <div style="align-self:flex-start; display:flex; flex-direction:row; gap:8px; align-items:center; background:rgb(255,255,255); border-radius:4px; padding:7px 10px;">
+                    <span style="width:10px; height:10px; border-radius:50%; background:rgb(4,120,87);"></span>
+                    <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Successful</span>
+                  </div>
+                  <ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px; font-size:16px; color:rgb(53,59,71); line-height:1.4;">
+                    <li><strong>During:</strong> Create mixed groups for peer learning</li>
+                    <li><strong>Practice:</strong> Assign 1-2 tasks that boost understanding</li>
+                  </ul>
+                </div>
+                <div style="width:1px; align-self:stretch; background:rgb(34,126,167); opacity:0.35;"></div>
+                <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
+                  <div style="align-self:flex-start; display:flex; flex-direction:row; gap:8px; align-items:center; background:rgb(255,255,255); border-radius:4px; padding:7px 10px;">
+                    <span style="width:10px; height:10px; border-radius:50%; background:rgb(173,75,140);"></span>
+                    <span style="font-size: 16px; color: rgb(53,59,71); font-weight: 700">Extra Support</span>
+                  </div>
+                  <ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px; font-size:16px; color:rgb(53,59,71); line-height:1.4;">
+                    <li><strong>Pre-teach:</strong> Before the focus lesson, preview common misconceptions</li>
+                    <li><strong>During:</strong> Ask targeted questions and observe student work</li>
+                    <li><strong>Practice:</strong> Assign 1-2 tasks that challenge misconceptions</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Prediction data table -->
+              <div id="sp-region" style="align-self:stretch;">
+                <!-- header: pinned to the page, horizontally synced with the body -->
+                <div id="sp-head" style="position:sticky; top:0; z-index:6; overflow-x:hidden; border:1px solid rgb(222,226,230); border-bottom:none; border-radius:4px 4px 0 0;">
+                  <div style="display:inline-flex; flex-direction:row; min-width:100%;">
+                    <div onClick="{{ studentHead.onClick }}" style="width:200px; flex-shrink:0; position:sticky; left:0; z-index:2; background:{{ studentHead.bg }}; border-right:1px solid rgb(213,217,226); border-bottom:1px solid rgb(213,217,226); padding:14px; min-height:152px; display:flex; flex-direction:row; gap:6px; align-items:flex-end; cursor:pointer; user-select:none;" style-hover="background:{{ studentHead.bgHover }};">
+                      <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Student</span>
+                      <span style="width:9px; height:12px; flex-shrink:0; display:inline-flex; align-items:center;">
+                        <sc-if value="{{ studentHead.both }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 0 L8 4 L1 4 Z" fill="rgb(109,109,109)"></path><path d="M4.5 12 L1 8 L8 8 Z" fill="rgb(109,109,109)"></path></svg></sc-if>
+                        <sc-if value="{{ studentHead.up }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 3 L8 7 L1 7 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                        <sc-if value="{{ studentHead.down }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 9 L1 5 L8 5 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                      </span>
+                    </div>
+                    <div onClick="{{ totalHead.onClick }}" style="width:150px; flex-shrink:0; background:{{ totalHead.bg }}; border-right:1px solid rgb(235,235,235); border-bottom:1px solid rgb(213,217,226); padding:14px; min-height:152px; display:flex; flex-direction:row; gap:6px; align-items:flex-end; cursor:pointer; user-select:none;" style-hover="background:{{ totalHead.bgHover }};">
+                      <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Total Successful</span>
+                      <span style="width:9px; height:12px; flex-shrink:0; display:inline-flex; align-items:center;">
+                        <sc-if value="{{ totalHead.both }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 0 L8 4 L1 4 Z" fill="rgb(109,109,109)"></path><path d="M4.5 12 L1 8 L8 8 Z" fill="rgb(109,109,109)"></path></svg></sc-if>
+                        <sc-if value="{{ totalHead.up }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 3 L8 7 L1 7 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                        <sc-if value="{{ totalHead.down }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 9 L1 5 L8 5 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                      </span>
+                    </div>
+                    <sc-for list="{{ tableCols }}" as="col" hint-placeholder-count="3">
+                      <div onClick="{{ col.onClick }}" style="width:224px; flex-shrink:0; background:{{ col.bg }}; border-right:1px solid rgb(235,235,235); border-bottom:1px solid rgb(213,217,226); padding:14px; min-height:152px; display:flex; flex-direction:row; gap:6px; align-items:flex-end; cursor:pointer; user-select:none;" style-hover="background:{{ col.bgHover }};">
+                        <span style="flex:1; font-weight:700; font-size:16px; color:rgb(53,59,71); line-height:1.3;">{{ col.label }}</span>
+                        <span style="width:9px; height:12px; flex-shrink:0; display:inline-flex; align-items:center; margin-bottom:2px;">
+                          <sc-if value="{{ col.both }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 0 L8 4 L1 4 Z" fill="rgb(109,109,109)"></path><path d="M4.5 12 L1 8 L8 8 Z" fill="rgb(109,109,109)"></path></svg></sc-if>
+                          <sc-if value="{{ col.up }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 3 L8 7 L1 7 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                          <sc-if value="{{ col.down }}"><svg viewBox="0 0 9 12" width="100%" height="100%"><path d="M4.5 9 L1 5 L8 5 Z" fill="rgb(34,126,167)"></path></svg></sc-if>
+                        </span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+                <!-- body: horizontal scroll; vertical wheel falls through to the page -->
+                <div id="sp-body" style="overflow-x:auto; border:1px solid rgb(222,226,230); border-top:none; border-radius:0 0 4px 4px;">
+                  <div style="display:inline-flex; flex-direction:column; min-width:100%;">
+                  <!-- body -->
+                  <sc-for list="{{ tableRows }}" as="r" hint-placeholder-count="10">
+                    <div style="display:flex; flex-direction:row;">
+                      <div style="width:200px; flex-shrink:0; position:sticky; left:0; z-index:2; background:rgb(255,255,255); border-right:1px solid rgb(213,217,226); border-bottom:1px solid rgb(235,235,235); padding:14px; min-height:48px; display:flex; align-items:center;">
+                        <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">{{ r.name }}</span>
+                      </div>
+                      <div style="width:150px; flex-shrink:0; background:rgb(255,255,255); border-right:1px solid rgb(235,235,235); border-bottom:1px solid rgb(235,235,235); padding:14px; min-height:48px; display:flex; align-items:center;">
+                        <span style="font-size:16px; color:{{ r.totalColor }};">{{ r.total }}</span>
+                      </div>
+                      <sc-for list="{{ r.cells }}" as="cell" hint-placeholder-count="3">
+                        <div onMouseEnter="{{ cell.onEnter }}" onMouseLeave="{{ onCellLeave }}" style="position:relative; width:224px; flex-shrink:0; min-height:48px; background:{{ cell.bg }}; border-right:1px solid rgb(213,217,226); border-bottom:1px solid rgb(213,217,226); display:flex; flex-direction:row; gap:8px; padding:10.5px 14px; align-items:center; cursor:default;">
+                          <span style="flex-grow:1; font-size:16px; color:{{ cell.color }};">{{ cell.text }}</span>
+                          <sc-if value="{{ cell.iconEmpty }}">
+                            <span style="width:16px; height:16px; flex-shrink:0; color:rgb(53,59,71); display:inline-flex; align-items:center;"><svg viewBox="0 0 16 11.333" width="16" height="11.333"><path d="M 8 11.333 L 0 3.333 C 1.056 2.256 2.275 1.431 3.658 0.858 C 5.042 0.286 6.489 0 8 0 C 9.511 0 10.958 0.286 12.342 0.858 C 13.725 1.431 14.944 2.256 16 3.333 L 8 11.333 Z M 8 9.433 L 14.067 3.367 C 13.189 2.7 12.233 2.194 11.2 1.85 C 10.167 1.506 9.1 1.333 8 1.333 C 6.9 1.333 5.833 1.506 4.8 1.85 C 3.767 2.194 2.811 2.7 1.933 3.367 L 8 9.433 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                          </sc-if>
+                          <sc-if value="{{ cell.iconPartial }}">
+                            <span style="width:16px; height:16px; flex-shrink:0; color:rgb(53,59,71); display:inline-flex; align-items:center;"><svg viewBox="0 0 16 11.333" width="16" height="11.333"><path d="M 8 11.333 L 0 3.333 C 1.067 2.244 2.289 1.417 3.667 0.85 C 5.044 0.283 6.489 0 8 0 C 9.522 0 10.972 0.283 12.35 0.85 C 13.728 1.417 14.944 2.244 16 3.333 L 8 11.333 Z M 4.983 6.417 C 5.406 6.106 5.872 5.864 6.383 5.692 C 6.894 5.519 7.433 5.433 8 5.433 C 8.567 5.433 9.106 5.519 9.617 5.692 C 10.128 5.864 10.594 6.106 11.017 6.417 L 14.067 3.367 C 13.2 2.711 12.253 2.208 11.225 1.858 C 10.197 1.508 9.122 1.333 8 1.333 C 6.878 1.333 5.803 1.508 4.775 1.858 C 3.747 2.208 2.8 2.711 1.933 3.367 L 4.983 6.417 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                          </sc-if>
+                          <sc-if value="{{ cell.showTip }}">
+                            <div style="position:absolute; left:50%; top:-40px; transform:translateX(-50%); z-index:10; display:flex; flex-direction:column; align-items:center; pointer-events:none;">
+                              <div style="border-radius:8px; background:rgb(68,78,96); box-shadow:0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1); padding:7px 11px;">
+                                <span style="font-size:15px; white-space:nowrap; color:rgb(255,255,255);">{{ cell.tip }}</span>
+                              </div>
+                              <span style="width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid rgb(68,78,96);"></span>
+                            </div>
+                          </sc-if>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-for>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="align-self:stretch; margin:0 16px; border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:20px 24px;">
+              <span style="font-size:16px; color:rgb(53,59,71); line-height:1.4;">For more information on how to use this data, read the <a href="https://docs.google.com/document/d/1x_rCV9iB8iy8mn1KWv5FCotGyHxmbJt-BZiH_Hq4KTQ/edit?tab=t.a0majods82wo" target="_blank" rel="noopener noreferrer">Data Analysis Guide</a>.</span>
+            </div>
+          </div>
+          </sc-if>
+
+          <!-- =========== REVIEW PANEL =========== -->
+          <sc-if value="{{ isReview }}">
+          <div style="align-self:stretch; display:flex; flex-direction:column; gap:24px; padding:0 16px;">
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <span style="font-weight:700; font-size:22px; color:rgb(53,59,71);">Review Performance</span>
+              <span style="font-size:16px; color:rgb(109,109,109); line-height:1.4; text-wrap:pretty;">After the cycle, review student work and lingering misconceptions about what was taught.</span>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <span style="font-weight:700; font-size:18px; color:rgb(53,59,71);">How are students understanding recent instruction?</span>
+              <span style="font-size:16px; color:rgb(103,112,125); line-height:1.4;">Students who earned all possible points for a learning component are considered to have demonstrated understanding. A learning component may be duplicated if it is assessed more than once.</span>
+            </div>
+
+            <div style="display:flex; flex-direction:column;">
+              <sc-for list="{{ lcRows }}" as="r" hint-placeholder-count="5">
+                <div style="display:flex; flex-direction:row; gap:24px; align-items:flex-start; justify-content:space-between; padding:20px 0; border-bottom:1px solid rgb(222,226,230);">
+                  <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+                    <span style="font-size:16px; color:rgb(53,59,71); line-height:1.35;">{{ r.lc }}</span>
+                    <sc-if value="{{ r.hasQ }}" hint-placeholder-val="{{ true }}">
+                      <span onClick="{{ openReviewQ }}" data-q="{{ r.q }}" style="font-size:14px; color:rgb(0,120,163); cursor:pointer; text-decoration:underline; align-self:flex-start;" style-hover="color:rgb(0,89,121);">Assessed by Question {{ r.q }}</span>
+                    </sc-if>
+                  </div>
+                  <div style="width:300px; flex-shrink:0; text-align:right; display:flex; flex-direction:column; gap:2px;">
+                    <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">{{ r.pct }}</span>
+                    <span style="font-size:16px; color:rgb(103,112,125);">demonstrated this learning component</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{ showMisconceptions }}">
+            <div style="border-radius:4px; background:rgb(229,242,249); box-shadow:inset 0 0 0 1px rgb(34,126,167); padding:20px 24px; display:flex; flex-direction:column; gap:16px; margin-top:8px;">
+              <div style="display:flex; flex-direction:row; align-items:center; justify-content:space-between;">
+                <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                  <span style="width:18px; height:18px; color:rgb(34,126,167); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 7 0 C 3.134 0 0 3.134 0 7 C 0 10.866 3.134 14 7 14 C 10.866 14 14 10.866 14 7 C 14 3.134 10.866 0 7 0 Z M 7 1.167 C 10.222 1.167 12.833 3.778 12.833 7 C 12.833 10.222 10.222 12.833 7 12.833 C 3.778 12.833 1.167 10.222 1.167 7 C 1.167 3.778 3.778 1.167 7 1.167 Z M 7 3.889 C 6.678 3.889 6.417 4.15 6.417 4.472 L 6.417 7.194 C 6.417 7.517 6.678 7.778 7 7.778 C 7.322 7.778 7.583 7.517 7.583 7.194 L 7.583 4.472 C 7.583 4.15 7.322 3.889 7 3.889 Z M 7 8.556 C 6.678 8.556 6.417 8.817 6.417 9.139 L 6.417 9.528 C 6.417 9.85 6.678 10.111 7 10.111 C 7.322 10.111 7.583 9.85 7.583 9.528 L 7.583 9.139 C 7.583 8.817 7.322 8.556 7 8.556 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                  <span style="font-weight:700; font-size:18px; color:rgb(53,59,71);">What misconceptions are blocking understanding?</span>
+                </div>
+                <a href="#" onClick="{{ openQuestions }}" style="font-weight: 700; font-size: 16px; color: rgb(0,120,163); cursor: pointer; text-align: center" style-hover="color:rgb(0,89,121);">View All Misconceptions</a>
+              </div>
+              <div style="display:flex; flex-direction:row; gap:16px; align-items:stretch;">
+                <sc-for list="{{ misconceptions }}" as="m" hint-placeholder-count="2">
+                  <div style="flex:1; border-radius:4px; background:rgb(255,255,255); box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:20px; display:flex; flex-direction:column; gap:12px;">
+                    <span style="font-size:16px; color:rgb(53,59,71); line-height:1.4;"><strong>{{ m.headline }}</strong> had this misconception</span>
+                    <span style="font-size:16px; color:rgb(53,59,71); line-height:1.4;">{{ m.text }}</span>
+                    <div onClick="{{ m.open }}" style="background:rgb(34,126,167); color:rgb(255,255,255); border-radius:6px; height:37px; padding:0 18px; display:flex; align-items:center; align-self:flex-start; font-weight:700; font-size:16px; cursor:pointer; user-select:none; transition:background 0.15s;" style-hover="background:rgb(27,101,134);">View Question</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+            </sc-if>
+
+            <div style="align-self:stretch; height:1px; background:rgb(213,217,226); margin:8px 0;"></div>
+
+            <span style="font-weight:700; font-size:22px; color:rgb(53,59,71);">Next steps to consider</span>
+            <div style="display:flex; flex-direction:row; gap:12px; align-items:center;">
+              <span style="width:20px; height:20px; flex-shrink:0; color:rgb(53,59,71); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 10.973 13.346 C 10.881 13.346 10.79 13.324 10.706 13.28 L 7 11.331 L 3.295 13.28 C 3.102 13.382 2.867 13.364 2.691 13.236 C 2.514 13.108 2.426 12.891 2.463 12.676 L 3.171 8.549 L 0.173 5.628 C 0.017 5.475 -0.039 5.247 0.028 5.04 C 0.095 4.833 0.275 4.682 0.49 4.65 L 4.633 4.048 L 6.486 0.293 C 6.679 -0.098 7.321 -0.098 7.514 0.293 L 9.367 4.048 L 13.51 4.65 C 13.725 4.682 13.905 4.833 13.972 5.04 C 14.039 5.247 13.983 5.475 13.827 5.628 L 10.829 8.549 L 11.537 12.676 C 11.573 12.891 11.486 13.108 11.309 13.236 C 11.21 13.309 11.091 13.346 10.973 13.346 Z M 7 10.111 C 7.092 10.111 7.184 10.133 7.267 10.177 L 10.212 11.725 L 9.649 8.446 C 9.617 8.26 9.679 8.07 9.815 7.939 L 12.196 5.617 L 8.904 5.139 C 8.717 5.111 8.555 4.994 8.473 4.825 L 7 1.842 L 5.528 4.825 C 5.445 4.994 5.283 5.112 5.097 5.139 L 1.805 5.617 L 4.186 7.939 C 4.321 8.07 4.383 8.26 4.351 8.446 L 3.789 11.725 L 6.734 10.177 C 6.818 10.133 6.909 10.111 7 10.111 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 0 0.327)"></path></svg></span>
+              <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Celebrate and lean into strengths</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <span style="font-weight:700; font-size:16px; color:rgb(53,59,71); padding-left:32px;">Address misconceptions</span>
+              <div style="display:flex; flex-direction:row; gap:12px; align-items:flex-start;">
+                <span style="width:20px; height:20px; flex-shrink:0; color:rgb(53,59,71); margin-top:2px; display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 7 0 C 3.134 0 0 3.134 0 7 C 0 10.866 3.134 14 7 14 C 10.866 14 14 10.866 14 7 C 14 3.134 10.866 0 7 0 Z M 7 1.167 C 10.222 1.167 12.833 3.778 12.833 7 C 12.833 10.222 10.222 12.833 7 12.833 C 3.778 12.833 1.167 10.222 1.167 7 C 1.167 3.778 3.778 1.167 7 1.167 Z M 7 3.889 C 6.678 3.889 6.417 4.15 6.417 4.472 L 6.417 7.194 C 6.417 7.517 6.678 7.778 7 7.778 C 7.322 7.778 7.583 7.517 7.583 7.194 L 7.583 4.472 C 7.583 4.15 7.322 3.889 7 3.889 Z M 7 8.556 C 6.678 8.556 6.417 8.817 6.417 9.139 L 6.417 9.528 C 6.417 9.85 6.678 10.111 7 10.111 C 7.322 10.111 7.583 9.85 7.583 9.528 L 7.583 9.139 C 7.583 8.817 7.322 8.556 7 8.556 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                <ul style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px; font-size:16px; color:rgb(53,59,71); line-height:1.4;">
+                  <li><strong>Adapt an upcoming lesson:</strong> look for opportunities in upcoming lessons/units to address areas of need</li>
+                  <li><strong>Differentiate instruction:</strong> use student-level data to inform small group instruction based on specific distractors</li>
+                </ul>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:row; gap:12px; align-items:flex-start;">
+              <span style="width:20px; height:20px; flex-shrink:0; color:rgb(53,59,71); margin-top:2px; display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 4.162 1.514 L 4.162 0.568 C 4.162 0.254 3.908 0 3.595 0 C 3.281 0 3.027 0.254 3.027 0.568 L 3.027 1.514 L 2.081 1.514 C 0.932 1.514 0 2.445 0 3.595 L 0 11.919 C 0 13.068 0.932 14 2.081 14 L 9.649 14 C 10.798 14 11.73 13.068 11.73 11.919 L 11.73 3.595 C 11.73 2.445 10.798 1.514 9.649 1.514 L 8.703 1.514 L 8.703 0.568 C 8.703 0.254 8.449 0 8.135 0 C 7.822 0 7.568 0.254 7.568 0.568 L 7.568 1.514 L 4.162 1.514 Z M 1.135 6.811 L 10.595 6.811 L 10.595 11.919 C 10.595 12.441 10.171 12.865 9.649 12.865 L 2.081 12.865 C 1.559 12.865 1.135 12.441 1.135 11.919 L 1.135 6.811 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 1.135 0)"></path></svg></span>
+              <div style="display:flex; flex-direction:column; gap:4px;">
+                <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Prepare for the next assessment</span>
+                <span style="font-size:16px; color:rgb(53,59,71); line-height:1.4;">Use the next cycle's Prepare for Instruction report to anticipate strengths and challenges in upcoming lessons.</span>
+              </div>
+            </div>
+            <div style="border-radius:4px; box-shadow:inset 0 0 0 1px rgb(213,217,226); padding:20px; margin-top:8px;">
+              <span style="font-size:16px; color:rgb(53,59,71); line-height:1.4;">For more information on how to use this data, read the <a href="https://docs.google.com/document/d/1zm7av2oT9lRcAOWo72TzIoAhuBavWIvGBmRcfo1I7GE/edit?tab=t.j3jz93rpf8o1" target="_blank" rel="noopener noreferrer">Data Analysis Guide</a>.</span>
+            </div>
+          </div>
+          </sc-if>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="align-self:stretch; display:flex; flex-direction:row; align-items:center; gap:16px; padding:16px 64px; background:rgb(246,247,249); border-top:1px solid rgb(222,226,230);">
+    <a href="#" style="font-size:14px;">Privacy Policy</a>
+    <a href="#" style="font-size:14px;">Terms of Use</a>
+    <a href="#" style="font-size:14px;">Student Privacy</a>
+    <span style="font-size:14px; color:rgb(109,109,109);">© 2026 The Achievement Network, Ltd. All Rights Reserved.</span>
+    <img src="assets/myanet-logo.png" alt="ANet" style="height:28px; object-fit:contain; margin-left:auto;">
+  </div>
+
+  <!-- =========== DATA MODAL =========== -->
+  <sc-if value="{{ showData }}">
+    <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:50; background:rgba(0,0,0,0.24); display:flex; align-items:center; justify-content:center; padding:40px;">
+      <div onClick="{{ stop }}" style="width:720px; max-width:100%; background:rgb(255,255,255); border-radius:8px; border:1px dashed rgb(213,217,226); box-shadow:0 12px 32px rgba(0,0,0,0.18); padding:40px; display:flex; flex-direction:column; gap:24px;">
+        <div style="display:flex; flex-direction:row; align-items:flex-start; justify-content:space-between; gap:16px;">
+          <span style="font-weight:700; font-size:30px; color:rgb(35,39,46); line-height:1.15;">Understanding Your Diagnostic Data</span>
+          <span onClick="{{ closeModal }}" style="width:20px; height:20px; flex-shrink:0; color:rgb(103,112,125); cursor:pointer; margin-top:6px; display:inline-flex; transition:color 0.15s;" style-hover="color:rgb(35,39,46);"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 0.212 0.212 C 0.495 -0.071 0.953 -0.071 1.235 0.212 L 5.5 4.477 L 9.765 0.212 C 10.047 -0.071 10.505 -0.071 10.788 0.212 C 11.071 0.495 11.071 0.953 10.788 1.235 L 6.523 5.5 L 10.788 9.765 C 11.071 10.047 11.071 10.505 10.788 10.788 C 10.505 11.071 10.047 11.071 9.765 10.788 L 5.5 6.523 L 1.235 10.788 C 0.953 11.071 0.495 11.071 0.212 10.788 C -0.071 10.505 -0.071 10.047 0.212 9.765 L 4.477 5.5 L 0.212 1.235 C -0.071 0.953 -0.071 0.495 0.212 0.212 Z" fill="currentColor" transform="matrix(1 0 0 1 1.5 1.5)"></path></svg></span>
+        </div>
+        <span style="font-size:18px; color:rgb(53,59,71); line-height:1.5;">Unlike traditional diagnostics that measure what students currently know, ANet's Diagnostic predicts how students will perform after they've have been taught the material.</span>
+        <span style="font-size:18px; color:rgb(53,59,71); line-height:1.5;">Each cycle predicts performance on the main learning components (building blocks of standards) within your upcoming lessons.</span>
+        <span style="font-size:18px; color:rgb(53,59,71); line-height:1.5;">With this forward-looking view, you can proactively adjust instruction based on what is likely to be a strength or a challenge for your class.</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- =========== QUESTIONS MODAL =========== -->
+  <sc-if value="{{ showQuestions }}">
+    <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:50; background:rgba(0,0,0,0.24); display:flex; align-items:center; justify-content:center; padding:5vh 5vw;">
+      <div onClick="{{ stop }}" style="width: 90vw; height: 90vh; background: rgb(255,255,255); border-radius: 8px; border: 0px solid dashed rgb(213,217,226); box-shadow: 0 12px 32px rgba(0,0,0,0.18); overflow: auto; padding: 24px 40px 40px">
+        <div style="position:relative; display:flex; align-items:center; justify-content:center; padding:8px 0 24px;">
+          <span style="font-weight:700; font-size:24px; color:rgb(35,39,46);">Questions</span>
+          <span onClick="{{ closeModal }}" style="position:absolute; right:0; top:8px; width:20px; height:20px; color:rgb(103,112,125); cursor:pointer; display:inline-flex; transition:color 0.15s;" style-hover="color:rgb(35,39,46);"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 0.212 0.212 C 0.495 -0.071 0.953 -0.071 1.235 0.212 L 5.5 4.477 L 9.765 0.212 C 10.047 -0.071 10.505 -0.071 10.788 0.212 C 11.071 0.495 11.071 0.953 10.788 1.235 L 6.523 5.5 L 10.788 9.765 C 11.071 10.047 11.071 10.505 10.788 10.788 C 10.505 11.071 10.047 11.071 9.765 10.788 L 5.5 6.523 L 1.235 10.788 C 0.953 11.071 0.495 11.071 0.212 10.788 C -0.071 10.505 -0.071 10.047 0.212 9.765 L 4.477 5.5 L 0.212 1.235 C -0.071 0.953 -0.071 0.495 0.212 0.212 Z" fill="currentColor" transform="matrix(1 0 0 1 1.5 1.5)"></path></svg></span>
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: flex-end; border-bottom: 1px solid rgb(213,217,226); margin-bottom: 24px">
+          <sc-for list="{{ qTabs }}" as="qt" hint-placeholder-count="4">
+            <div onClick="{{ qt.onClick }}" style="display: flex; padding: 14px 18px; align-items: center; cursor: pointer; transition: background 0.15s" style-hover="background:rgb(246,247,249);">
+              <span style="font-size:16px; white-space:nowrap; color:{{ qt.color }};">{{ qt.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="font-weight:700; font-size:20px; color:rgb(53,59,71); margin-bottom:20px;">Question {{ qTab }}</div>
+
+        <div style="display:flex; flex-direction:column; gap:2px; margin-bottom:8px;">
+          <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">{{ q.typeLabel }}</span>
+          <span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Points Available: {{ q.points }}</span>
+        </div>
+
+        <div style="margin:0 0 16px;">
+          <sc-for list="{{ q.blocks }}" as="b" hint-placeholder-count="1">
+            <sc-if value="{{ b.isText }}" hint-placeholder-val="{{ true }}">
+              <p style="font-size:16px; color:rgb(53,59,71); line-height:1.5; margin:0 0 12px;">{{ b.text }}</p>
+            </sc-if>
+            <sc-if value="{{ b.isImageAsset }}">
+              <div style="margin: 0 0 12px;">{{ b.imgEl }}</div>
+            </sc-if>
+            <sc-if value="{{ b.isImage }}">
+              <div style="display: flex; align-items: flex-start; gap: 10px; border: 1px solid rgb(213,217,226); border-radius: 4px; background: rgb(248,249,251); padding: 12px 14px; margin: 0 0 12px">
+                <span style="flex-shrink:0; font-family:ui-monospace,Menlo,monospace; font-size:11px; font-weight:700; letter-spacing:0.06em; color:rgb(103,112,125); background:rgb(233,236,240); border-radius:3px; padding:3px 6px; margin-top:2px;">IMAGE</span>
+                <span style="font-family:ui-monospace,Menlo,monospace; font-size:13px; color:rgb(103,112,125); line-height:1.5;">{{ b.text }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ b.isList }}">
+              <ul style="margin:0 0 12px; padding-left:22px; font-size:16px; color:rgb(53,59,71); line-height:1.5;">
+                <sc-for list="{{ b.listItems }}" as="li" hint-placeholder-count="3">
+                  <li style="margin-bottom:4px;">{{ li }}</li>
+                </sc-for>
+              </ul>
+            </sc-if>
+            <sc-if value="{{ b.isRatioTable }}">
+              <div style="display:inline-flex; flex-direction:column; border:1px solid rgb(213,217,226); border-radius:4px; overflow:hidden; margin:0 0 12px;">
+                <sc-for list="{{ b.tRows }}" as="row" hint-placeholder-count="4">
+                  <sc-if value="{{ row.isHeader }}">
+                    <div style="display:flex; align-self:stretch; background:rgb(238,241,245);">
+                      <sc-for list="{{ row.cells }}" as="cell" hint-placeholder-count="2">
+                        <div style="flex:1 1 0; padding:9px 20px; text-align:center; white-space:nowrap; font-size:15px; font-weight:700; color:rgb(53,59,71); border-bottom:1px solid rgb(213,217,226); border-right:1px solid rgb(213,217,226);">{{ cell }}</div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ row.notHeader }}">
+                    <div style="display:flex; align-self:stretch;">
+                      <sc-for list="{{ row.cells }}" as="cell" hint-placeholder-count="2">
+                        <div style="flex:1 1 0; padding:9px 20px; text-align:center; font-size:16px; color:rgb(53,59,71); border-bottom:1px solid rgb(235,235,235); border-right:1px solid rgb(235,235,235);">{{ cell }}</div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ b.isTableGroup }}">
+              <div style="display:flex; flex-flow:row wrap; gap:20px; margin:4px 0 12px;">
+                <sc-for list="{{ b.tables }}" as="t" hint-placeholder-count="4">
+                  <div style="display:flex; flex-direction:column; gap:6px;">
+                    <span style="font-weight:700; font-size:15px; color:rgb(53,59,71);">{{ t.label }}</span>
+                    <div style="display:inline-flex; flex-direction:column; border:1px solid rgb(213,217,226); border-radius:4px; overflow:hidden;">
+                      <sc-for list="{{ t.rows }}" as="row" hint-placeholder-count="3">
+                        <div style="display:flex;">
+                          <sc-for list="{{ row }}" as="cell" hint-placeholder-count="2">
+                            <div style="min-width:52px; padding:8px 16px; text-align:center; font-size:15px; color:rgb(53,59,71); border-bottom:1px solid rgb(235,235,235); border-right:1px solid rgb(235,235,235);">{{ cell }}</div>
+                          </sc-for>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+
+        <div style="display:flex; flex-direction:column; margin-bottom:32px; border:1px solid rgb(222,226,230); border-radius:4px; overflow:hidden;">
+          <sc-for list="{{ q.choices }}" as="ch" hint-placeholder-count="4">
+            <div style="display:flex; flex-direction:row; align-items:center; background:{{ ch.bg }}; border-bottom:{{ ch.borderBottom }}; border-left:{{ ch.borderLeft }};">
+              <div style="width:{{ ch.letterWidth }}; text-align:center; font-size:28px; color:{{ ch.letterColor }}; padding:14px 0;">{{ ch.L }}</div>
+              <div style="padding-left:24px; font-size:17px; color:{{ ch.textColor }};">{{ ch.text }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="font-weight:700; font-size:18px; color:rgb(53,59,71); margin-bottom:16px;">Distractor Rationale and Percentage by Answer</div>
+
+        <div style="display: flex; flex-direction: column; border: 1px solid rgb(213,217,226); border-radius: 4px; overflow: hidden; margin-bottom: 40px">
+          <sc-for list="{{ q.drRows }}" as="dr" hint-placeholder-count="4">
+            <div style="display:flex; flex-direction:row; align-items:flex-start; border-bottom:{{ dr.borderBottom }};">
+              <div style="width:110px; flex-shrink:0; padding:20px; font-size:16px; color:rgb(53,59,71);">{{ dr.pct }}</div>
+              <div style="width:70px; flex-shrink:0; padding:20px 0; display:flex; justify-content:center;"><span style="width:24px; height:24px; border-radius:50%; background:{{ dr.badgeBg }}; color:{{ dr.badgeColor }}; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center;">{{ dr.L }}</span></div>
+              <div style="flex:1; padding:20px 24px 20px 8px; display:flex; flex-direction:column; gap:8px;">
+                <sc-if value="{{ dr.correct }}" hint-placeholder-val="{{ true }}"><span style="font-weight:700; font-size:16px; color:rgb(53,59,71);">Correct Answer</span></sc-if>
+                <span style="font-weight:{{ dr.answerWeight }}; font-size:16px; color:rgb(53,59,71);">{{ dr.answerText }}</span>
+                <span style="font-size:16px; color:rgb(53,59,71); line-height:1.5;"><strong>Rationale:</strong> {{ dr.rationale }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display: flex; flex-direction: row; border-top: 1px solid rgb(213,217,226)">
+          <sc-for list="{{ breakdown }}" as="col" hint-placeholder-count="4">
+            <div style="flex: 1; padding: 20px 16px; border-right: 1px solid rgb(213,217,226)">
+              <div style="font-weight:700; font-size:16px; color:rgb(53,59,71); margin-bottom:16px;">{{ col.header }}</div>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:16px; color:rgb(53,59,71);">
+                <sc-for list="{{ col.names }}" as="nm" hint-placeholder-count="0">
+                  <span>{{ nm }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- =========== RESOURCES (LC MAP) MODAL =========== -->
+  <sc-if value="{{ showResources }}">
+    <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:50; background:rgba(0,0,0,0.24); display:flex; align-items:center; justify-content:center; padding:5vh 5vw;">
+      <div onClick="{{ stop }}" style="width: 960px; max-width: 100%; max-height: 88vh; background: rgb(255,255,255); border-radius: 8px; border: 1px solid rgb(213,217,226); box-shadow: 0 12px 32px rgba(0,0,0,0.18); overflow: auto; padding: 24px 40px 40px">
+        <div style="position:relative; display:flex; align-items:center; justify-content:center; padding:8px 0 20px;">
+          <span style="font-weight:700; font-size:24px; color:rgb(35,39,46);">Learning Component Map</span>
+          <span onClick="{{ closeModal }}" style="position:absolute; right:0; top:8px; width:20px; height:20px; color:rgb(103,112,125); cursor:pointer; display:inline-flex; transition:color 0.15s;" style-hover="color:rgb(35,39,46);"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 0.212 0.212 C 0.495 -0.071 0.953 -0.071 1.235 0.212 L 5.5 4.477 L 9.765 0.212 C 10.047 -0.071 10.505 -0.071 10.788 0.212 C 11.071 0.495 11.071 0.953 10.788 1.235 L 6.523 5.5 L 10.788 9.765 C 11.071 10.047 11.071 10.505 10.788 10.788 C 10.505 11.071 10.047 11.071 9.765 10.788 L 5.5 6.523 L 1.235 10.788 C 0.953 11.071 0.495 11.071 0.212 10.788 C -0.071 10.505 -0.071 10.047 0.212 9.765 L 4.477 5.5 L 0.212 1.235 C -0.071 0.953 -0.071 0.495 0.212 0.212 Z" fill="currentColor" transform="matrix(1 0 0 1 1.5 1.5)"></path></svg></span>
+        </div>
+
+        <!-- Intro -->
+        <div style="font-weight: 700; font-size: 19px; color: rgb(35,39,46); margin-bottom: 8px; display: none">ESQ Curriculum Map</div>
+        <div style="font-size:15px; color:rgb(53,59,71); line-height:1.55; margin-bottom:4px;">This resource includes:</div>
+        <ul style="margin:0 0 4px; padding-left:22px; font-size:15px; color:rgb(53,59,71); line-height:1.55;">
+          <li style="margin-bottom:2px;">Learning components assessed in each Milestone
+            <ul style="margin:2px 0; padding-left:20px; list-style:circle;">
+              <li>Note: Standards marked with an asterisk (*) indicate that one or more learning components have a restriction</li>
+            </ul>
+          </li>
+          <li>Standards, curriculum-specific focus lessons and common misconceptions related to each learning component</li>
+        </ul>
+        <div style="font-weight:700; font-size:17px; color:rgb(35,39,46); margin:18px 0 8px;">How to Use</div>
+        <ol style="margin:0 0 8px; padding-left:22px; font-size:15px; color:rgb(53,59,71); line-height:1.55;">
+          <li style="margin-bottom:2px;">Locate each learning component that appears on your Prepare for Instruction report.</li>
+          <li style="margin-bottom:2px;">Identify the focus lesson(s) for predicted strengths and predicted challenges.</li>
+          <li style="margin-bottom:2px;">Learn about common misconceptions and strategies in the Instructional Moves modules.</li>
+          <li style="margin-bottom:2px;">Plan instruction for each focus lesson and consider…
+            <ul style="margin:2px 0; padding-left:20px; list-style:lower-alpha;">
+              <li>Continuing with regular instruction for predicted strengths</li>
+              <li>Applying strategies from the Instructional Moves modules to address misconceptions for predicted challenges</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Full document: every grade and milestone -->
+        <sc-for list="{{ resDoc }}" as="g" hint-placeholder-count="7">
+          <div style="margin-top:34px;">
+            <div style="font-weight:700; font-size:20px; color:rgb(35,39,46); padding-bottom:10px; border-bottom:2px solid rgb(34,126,167); margin-bottom:16px;">{{ g.title }}</div>
+            <sc-for list="{{ g.milestones }}" as="ms" hint-placeholder-count="8">
+              <div style="margin-bottom:22px;">
+                <div style="display:flex; flex-direction:row; align-items:baseline; justify-content:space-between; background:rgb(34,126,167); border-radius:4px 4px 0 0; padding:9px 14px;">
+                  <span style="font-weight:700; font-size:15px; color:rgb(255,255,255);">{{ ms.num }}</span>
+                  <span style="font-size:14px; color:rgb(214,232,241);">{{ ms.assess }}</span>
+                </div>
+                <div style="display:flex; flex-direction:column; border:1px solid rgb(222,226,230); border-top:none; border-radius:0 0 4px 4px; overflow:hidden;">
+                  <div style="display:flex; flex-direction:row; background:rgb(246,247,249); border-bottom:1px solid rgb(222,226,230);">
+                    <div style="width:96px; flex-shrink:0; padding:9px 14px; font-weight:700; font-size:13px; color:rgb(53,59,71);">Standards</div>
+                    <div style="flex:1; padding:9px 14px; font-weight:700; font-size:13px; color:rgb(53,59,71); border-left:1px solid rgb(222,226,230);">Key Learning Components</div>
+                    <div style="width:118px; flex-shrink:0; padding:9px 14px; font-weight:700; font-size:13px; color:rgb(53,59,71); border-left:1px solid rgb(222,226,230);">Focus Lessons</div>
+                    <div style="width:104px; flex-shrink:0; padding:9px 14px; font-weight:700; font-size:13px; color:rgb(53,59,71); border-left:1px solid rgb(222,226,230);">Instructional Moves</div>
+                  </div>
+                  <sc-for list="{{ ms.rows }}" as="row" hint-placeholder-count="4">
+                    <div style="display:flex; flex-direction:row; align-items:stretch; border-top:{{ row.rowBorder }};">
+                      <div style="width:96px; flex-shrink:0; padding:11px 14px; font-weight:700; font-size:14px; color:rgb(53,59,71);">{{ row.std }}</div>
+                      <div style="flex:1; padding:11px 14px; font-size:14px; color:rgb(53,59,71); line-height:1.45; border-left:1px solid rgb(235,236,238);">{{ row.lc }}</div>
+                      <div style="width:118px; flex-shrink:0; padding:11px 14px; font-size:14px; color:rgb(53,59,71); border-left:1px solid rgb(235,236,238);">{{ row.focus }}</div>
+                      <div style="width:104px; flex-shrink:0; padding:11px 14px; border-left:1px solid rgb(235,236,238); display:flex; align-items:flex-start;"><a href="#" onClick="{{ stopLink }}" style="font-weight:700; font-size:14px; color:rgb(0,120,163); text-decoration:none;" style-hover="color:rgb(0,89,121);">View</a></div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;classSize&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:24,&quot;min&quot;:1,&quot;max&quot;:40,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Report data&quot;,&quot;unit&quot;:&quot; students&quot;},&quot;strengthThreshold&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:68,&quot;min&quot;:40,&quot;max&quot;:85,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Report data&quot;,&quot;unit&quot;:&quot;%&quot;},&quot;showMisconceptions&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review Performance&quot;}}">
+class Component extends DCLogic {
+  state = { tab: "prepare", modal: null, qTab: 1, tooltip: true, grade: 3, period: "G3-Period-1", cycle: "Milestone 1", openF: null, report: { grade: 3, milestone: 1 }, lcmap: null, lcfull: null, qgen: null, hoverCell: null, sort: { key: "name", dir: "asc" } };
+
+  // Static demo dataset for the student-level prediction table (exact values
+  // from the wireframe). Each cell is a variant key:
+  //   na       Not Assessed          (Confidence=N/A)
+  //   null     — / no prediction     (Confidence=Insufficient)
+  //   succ     Successful            (Confidence=High)
+  //   extra    Extra Support         (Confidence=High)
+  //   succ_p   Successful            (Confidence=Partial)
+  //   extra_p  Extra Support         (Confidence=Partial)
+  // Build the student-level prediction table from the REAL roster for the
+  // selected period and the REAL learning components for this grade/milestone.
+  // Columns = the report's learning components (in Question order); rows = the
+  // period roster. Each cell is generated deterministically (stable per render)
+  // and weighted by that LC's class-level success rate, so a class strength
+  // shows more "Successful" students than a class challenge.
+  // Every prediction starts as a per-student, per-LC prediction SCORE. A score
+  // at or above the threshold (68) means the student is predicted to be
+  // successful on that LC; below it means they need extra support. All
+  // class-level numbers in this report are aggregated up from these scores.
+  studentPred(report, items, roster) {
+    const grade = report.grade;
+    const T = this.props.strengthThreshold ?? 68;
+    const hash = (s) => {
+      let h = 2166136261;
+      for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+      return h >>> 0;
+    };
+    const rnd = (s) => hash(s) / 4294967296;
+    const cols = items.map((x) => x.lc);
+    const rows = roster.map((name) => {
+      // ~8% of the roster has not been assessed this cycle.
+      if (hash(name + "|abs|" + grade) % 100 < 8) {
+        return { name, total: "Not Assessed", assessed: false, avg: null, cells: items.map(() => "na"), scores: items.map(() => null) };
+      }
+      // A per-student ability offset shifts that student off the class mean on
+      // every LC, so rosters contain consistently strong and struggling students.
+      const ability = (rnd(name + "|abil|" + grade) * 2 - 1) * 24;
+      let succCount = 0, sum = 0, cnt = 0;
+      const scores = [], cells = [];
+      items.forEach((it) => {
+        const conf = hash(name + "|c|" + it.lc) % 100;
+        if (conf < 8) { scores.push(null); cells.push("null"); return; } // insufficient data → —
+        const partial = conf < 28;                                       // ~20% partial confidence
+        const noise = (rnd(name + "|s|" + it.lc) * 2 - 1) * 9;
+        const score = Math.max(3, Math.min(99, Math.round(it.d + ability + noise)));
+        scores.push(score); sum += score; cnt++;
+        if (score >= T) { succCount++; cells.push(partial ? "succ_p" : "succ"); }
+        else cells.push(partial ? "extra_p" : "extra");
+      });
+      return { name, total: String(succCount), assessed: true, avg: cnt ? sum / cnt : null, cells, scores };
+    });
+    // Default sort: student name, alphabetically.
+    rows.sort((a, b) => a.name.localeCompare(b.name));
+    return { cols, rows };
+  }
+
+  cellDef(key) {
+    const D = {
+      na:      { bg: "rgb(255,255,255)", hoverBg: "rgb(255,255,255)", text: "Not Assessed", color: "rgb(109,109,109)", icon: null, tip: null },
+      "null":  { bg: "rgb(255,255,255)", hoverBg: "rgb(213,217,226)", text: "—", color: "rgb(53,59,71)", icon: "empty", tip: "Not enough data for a prediction" },
+      succ:    { bg: "rgb(209,250,229)", hoverBg: "rgb(209,250,229)", text: "Successful", color: "rgb(53,59,71)", icon: null, tip: null },
+      extra:   { bg: "rgb(247,236,244)", hoverBg: "rgb(247,236,244)", text: "Extra Support", color: "rgb(53,59,71)", icon: null, tip: null },
+      succ_p:  { bg: "rgb(209,250,229)", hoverBg: "rgb(167,243,208)", text: "Successful", color: "rgb(53,59,71)", icon: "partial", tip: "Prediction is weak due to limited data" },
+      extra_p: { bg: "rgb(247,236,244)", hoverBg: "rgb(241,217,236)", text: "Extra Support", color: "rgb(53,59,71)", icon: "partial", tip: "Prediction is weak due to limited data" },
+    };
+    return D[key] || D.na;
+  }
+
+  // Column sort: only one column active at a time. Same column toggles
+  // direction; a new column starts asc for names, desc for values.
+  setSort(key) {
+    this.setState((s) => {
+      const cur = s.sort || { key: "name", dir: "asc" };
+      if (cur.key === key) return { sort: { key: key, dir: cur.dir === "asc" ? "desc" : "asc" } };
+      return { sort: { key: key, dir: key === "name" ? "asc" : "desc" } };
+    });
+  }
+
+  componentDidMount() {
+    import("./lcmap.js").then((m) => this.setState({ lcmap: m.LCMAP })).catch(() => {});
+    import("./lcfullmap.js").then((m) => this.setState({ lcfull: m.LCFULL })).catch(() => {});
+    import("./qdata.js").then((m) => this.setState({ qgen: m.QDATA })).catch(() => {});
+    // Keep the page-sticky header's horizontal offset in sync with the body's
+    // horizontal scroll. Scroll doesn't bubble, so listen in the capture phase;
+    // this survives tab re-renders that recreate the table nodes.
+    document.addEventListener("scroll", (e) => {
+      const b = e.target;
+      if (!b || b.id !== "sp-body") return;
+      const h = document.getElementById("sp-head");
+      if (h) h.scrollLeft = b.scrollLeft;
+    }, true);
+  }
+
+  pct(grade, ms, lc) {
+    const s = grade + "|" + ms + "|" + lc;
+    let h = 0;
+    for (let i = 0; i < s.length; i++) { h = (h * 31 + s.charCodeAt(i)) >>> 0; }
+    return 38 + (h % 55); // 38..92
+  }
+
+  // Class mean prediction score for a learning component, from the diagnostic
+  // that precedes this milestone (BOY diagnostic → Milestone 1). Independent of
+  // the milestone's own formative item results.
+  diagPct(grade, ms, lc) {
+    const s = "boy|" + grade + "|" + ms + "|" + lc;
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+    h >>>= 0;
+    return 42 + (h % 45); // 42..86
+  }
+
+  // Deterministic per-grade class size in the 20..30 range.
+  classSizeFor(grade) {
+    return 20 + ((Number(grade) * 7 + 3) % 11);
+  }
+
+  // A distinct roster of students per grade, sliced from a shared name pool.
+  rosterFor(grade, size) {
+    const POOL = ["Abe Colon", "Alicia Reed", "Al Oneal", "Chelsea Rush", "Cora Rosario", "Dion Faulkner", "Dion Valentine", "Eugenia Aguilar", "Ezequiel Shields", "Frankie Petersen", "Gloria Cervantes", "Inez Glover", "Joanne Garcia", "Juan Mccall", "Jude Mason", "Kathie Long", "Keisha Conway", "Kimberley Mata", "Lindsey Alvarez", "Liza Sosa", "Marcelino Mercado", "Marcie Lopez", "Rocco Houston", "Socorro Wade", "Bennie Wolfe", "Bernice Salas", "Bradford Nunez", "Carlos Vaughn", "Damien Barr", "Delia Weeks", "Emilio Frost", "Faith Hobbs", "Gerard Buck", "Guadalupe Reid", "Harriet Poole", "Ismael Doyle", "Jocelyn Ware", "Kurt Trevino", "Latoya Berg", "Lonnie Ayala", "Maggie Ortiz", "Nadia Combs", "Neal Riggs", "Ollie Sampson", "Priscilla Kent", "Reginald Dunn", "Rosalie Vega", "Sammy Blevins", "Tcommie Lara", "Vera Cortez", "Wallace Kidd", "Willard Boone", "Yvette Marsh", "Zachary Pruitt", "Adrienne Ott", "Byron Cline", "Cecelia Roy", "Darrell Nash", "Erika Pace", "Freddie Odom", "Grady Lott", "Hilda Vance", "Ivan Mayo", "Jenna Snow", "Kirk Rankin", "Leona Dodd", "Moses Hardin", "Nettie Cain", "Otis Blackwell", "Paulette Dunn", "Quincy Ray", "Roderick Fox", "Selena Beard", "Tobias Nixon", "Ursula Pugh", "Vernon Chase", "Wendy Stark", "Xavier Munoz", "Yolanda Reese", "Zelda Frye"];
+    const g0 = Number(grade) || 0;
+    // First- and last-name banks derived from the curated roster names.
+    const FIRSTS = [], LASTS = [];
+    POOL.forEach((n) => {
+      const sp = n.indexOf(" ");
+      const f = n.slice(0, sp), l = n.slice(sp + 1);
+      if (FIRSTS.indexOf(f) < 0) FIRSTS.push(f);
+      if (LASTS.indexOf(l) < 0) LASTS.push(l);
+    });
+    const F = FIRSTS.length, L = LASTS.length;
+    const cand = (k) => FIRSTS[k % F] + " " + LASTS[(Math.floor(k / F) + k * 7) % L];
+    // Walk ONE global candidate sequence, filling each grade's roster in turn.
+    // A candidate is consumed once, so no student is enrolled in two periods;
+    // a candidate is skipped if that first name is already used in the grade
+    // being filled, so first names are unique within every period.
+    let k = 0, out = [];
+    for (let g = 0; g <= 8; g++) {
+      const n = g === g0 ? size : this.classSizeFor(g);
+      const firsts = {}, roster = [];
+      while (roster.length < n && k < F * L) {
+        const name = cand(k++);
+        const f = name.slice(0, name.indexOf(" "));
+        if (firsts[f]) continue;
+        firsts[f] = 1;
+        roster.push(name);
+      }
+      if (g === g0) out = roster;
+    }
+    return out;
+  }
+
+  // Question data for Grade 6, Milestone 1 — one item per learning component,
+  // ordered to match the report's learning-component list (Question 1..4).
+  qData() {
+    return Object.assign({}, this.state.qgen || {}, {
+      "3|1": [
+        {
+          lc: "Model a multiplication situation, including by writing a multiplication expression",
+          blocks: [
+            { kind: "text", text: "Valentina makes a painting that has 5 rows of stars and 9 stars in each row, shown below. Which expression represents the number of stars on Valentina's painting?" },
+            { kind: "image", src: "assets/g3_i184964_stars.png", imgWidth: "300px", text: "A painting on an easel with 5 rows of stars, 9 stars in each row." },
+          ],
+          choices: [
+            { L: "A", text: "5 + 5 + 5", pct: 12, correct: false, dr: "Student may have thought that only repeated addition, and not multiplication, can represent arrays; chose an expression in which a factor is repeatedly added an incorrect number of times." },
+            { L: "B", text: "5 × 9", pct: 77, correct: true, dr: "Correct." },
+            { L: "C", text: "9 + 5", pct: 3, correct: false, dr: "Student may not have understood how an array relates to multiplication; chose an expression in which the factors are added rather than multiplied." },
+            { L: "D", text: "9 ÷ 5", pct: 8, correct: false, dr: "Student confused a context calling for multiplication with one calling for division; divided instead of multiplying the factors." },
+          ],
+        },
+        {
+          lc: "Identify a multiplication situation based on a given multiplication expression",
+          blocks: [
+            { kind: "text", text: "Felipe wrote this number sentence to solve a problem: 8 × 4 = ? Which problem was Felipe most likely trying to solve?" },
+          ],
+          choices: [
+            { L: "A", text: "Jimena has 8 bracelets. She buys 4 more. How many bracelets does Jimena have?", pct: 16, correct: false, dr: "Student identified a context illustrating addition as one that would illustrate multiplication." },
+            { L: "B", text: "Jimena has 8 muffins. She separates the muffins into 4 groups. How many muffins are in each group?", pct: 18, correct: false, dr: "Student identified a context illustrating division as one that would illustrate multiplication." },
+            { L: "C", text: "Jimena has 8 bags of grapes. There are 4 grapes in each bag. How many grapes does Jimena have?", pct: 60, correct: true, dr: "Correct." },
+            { L: "D", text: "Jimena has 8 stickers. Her friend has 4 stickers. How many more stickers does Jimena have than her friend?", pct: 7, correct: false, dr: "Student identified a context illustrating subtraction as one that would illustrate multiplication." },
+          ],
+        },
+        {
+          lc: "Identify a division situation based on a given division expression",
+          typeLabel: "Multiple Select", points: "2", demoPct: 38,
+          blocks: [
+            { kind: "text", text: "Select two statements that can be represented by the expression 15 ÷ 3." },
+          ],
+          choices: [
+            { L: "A", text: "Duncan buys 15 pencils. He gives away 3 pencils.", pct: 21, correct: false, dr: "Student identified a situation requiring subtraction as one requiring division." },
+            { L: "B", text: "Jaleel receives 15 stickers from each of 3 of his classmates.", pct: 30, correct: false, dr: "Student identified a situation requiring multiplication as one requiring division." },
+            { L: "C", text: "Natasha has 15 colored tiles. She places them in 3 equal rows.", pct: 50, correct: true, dr: "Correct." },
+            { L: "D", text: "Kevin has 15 students in his class. The class gains 3 new students.", pct: 18, correct: false, dr: "Student identified a situation requiring addition as one requiring division." },
+            { L: "E", text: "Olivia gives a total of 15 muffins away. She gives the same number of muffins to each of 3 friends.", pct: 42, correct: true, dr: "Correct." },
+          ],
+        },
+        {
+          lc: "Interpret whole number quotients as the number of objects in each group when a set number of objects is partitioned into equal groups",
+          blocks: [
+            { kind: "text", text: "Which equation describes how the toy cars are divided?" },
+            { kind: "image", src: "assets/g3_i184997_toycars.png", imgWidth: "240px", text: "18 toy cars divided into 6 groups with 3 cars in each group." },
+          ],
+          choices: [
+            { L: "A", text: "3 ÷ 6 = 18", pct: 13, correct: false, dr: "Student used a division symbol as if it were a multiplication symbol." },
+            { L: "B", text: "6 ÷ 3 = 18", pct: 14, correct: false, dr: "Student used a division symbol as if it were a multiplication symbol." },
+            { L: "C", text: "6 ÷ 18 = 3", pct: 4, correct: false, dr: "Student confused the dividend and divisor when representing an equation." },
+            { L: "D", text: "18 ÷ 6 = 3", pct: 70, correct: true, dr: "Correct." },
+          ],
+        },
+        {
+          lc: "Apply the commutative property as a strategy to multiply",
+          blocks: [
+            { kind: "text", text: "In the expressions below, d represents an unknown number. Which expression is equivalent to 5 × d?" },
+          ],
+          choices: [
+            { L: "A", text: "d + 5", pct: 9, correct: false, dr: "Student misunderstood the relationship between multiplication and addition; thought that multiplying two factors is equivalent to adding them in the reverse order." },
+            { L: "B", text: "d × 5", pct: 63, correct: true, dr: "Correct." },
+            { L: "C", text: "5 ÷ d", pct: 19, correct: false, dr: "Student misunderstood the relationship between multiplication and division; may have thought they were equivalent operations." },
+            { L: "D", text: "d ÷ 5", pct: 9, correct: false, dr: "Student misunderstood the relationship between multiplication and division; chose an expression that represents the product a x b as equal to the quotient b / a." },
+          ],
+        },
+        {
+          lc: "Apply the distributive property as a strategy to multiply",
+          blocks: [
+            { kind: "text", text: "What is another way of expressing 3 × 9?" },
+          ],
+          choices: [
+            { L: "A", text: "(5 × 4) + 3", pct: 18, correct: false, dr: "Student decomposed the multiplier into the right values but related those values with multiplication and then added the multiplicand." },
+            { L: "B", text: "(3 × 5) + 4", pct: 21, correct: false, dr: "Student correctly decomposed the multiplier, but only distributed the multiplicand to one of the resulting terms." },
+            { L: "C", text: "(3 × 5) + (3 × 4)", pct: 53, correct: true, dr: "Correct." },
+            { L: "D", text: "(3 + 5) × (3 + 4)", pct: 9, correct: false, dr: "Student attempted to rewrite a multiplication expression using the distributive property, but mistakenly switched the addition and multiplication symbols." },
+          ],
+        },
+      ],
+      "3|2": [
+        {
+          lc: "Use subtraction to solve one-step word problems involving masses or volumes that are given in the same units",
+          blocks: [
+            { kind: "text", text: "Noah uses some carrots for cooking. The scales below show the masses, in grams, of the starting amount of carrots and of the carrots Noah used for cooking. About how many grams of carrots were not used in Noah's cooking?" },
+            { kind: "image", text: "Two identical round dial scales are shown side by side. Each scale has markings at 0g (top), 10, 20, 30, 40, 50, 60, 70, 80, and 90. The left scale is labeled \"Mass of starting amount of carrots\" and its needle points to approximately 70 grams, with a larger pile of carrots on top. The right scale is labeled \"Mass of carrots used for cooking\" and its needle points to approximately 40 grams, with a smaller pile of carrots on top." },
+          ],
+          choices: [
+            { L: "A", text: "30", pct: 41, correct: true, dr: "Correct." },
+            { L: "B", text: "40", pct: 25, correct: false, dr: "Student found the estimated mass of carrots used for cooking by choosing the measurement on the second scale." },
+            { L: "C", text: "60", pct: 13, correct: false, dr: "Student rounded the starting mass of the carrots (~70) up to 100 without recognizing that was not necessarily the closest estimate, and subtracted 40 from 100." },
+            { L: "D", text: "110", pct: 21, correct: false, dr: "Student added the estimated values instead of subtracting." },
+          ],
+        },
+        {
+          lc: "Use multiplication to solve one-step word problems involving masses or volumes that are given in the same units",
+          blocks: [
+            { kind: "text", text: "Gabrielle uses the amount of water shown below to make a jug of lemonade. Gabrielle will make 6 jugs of lemonade. How many total liters (L) of water will she use?" },
+            { kind: "image", text: "Image shows a beaker or measuring container with water filled to the 3 L mark on a scale that goes up to 4 L." },
+          ],
+          choices: [
+            { L: "A", text: "3", pct: 28, correct: false, dr: "Student used subtraction instead of multiplication to try to find the total amount." },
+            { L: "B", text: "9", pct: 6, correct: false, dr: "Student added the two given values instead of multiplying, possibly misinterpreting the meaning of \"total.\"" },
+            { L: "C", text: "18", pct: 62, correct: true, dr: "Correct." },
+            { L: "D", text: "24", pct: 4, correct: false, dr: "Student used an incorrect value for one group when multiplying, likely confusing the maximum marked value with the given marked value." },
+          ],
+        },
+        {
+          lc: "Round whole numbers to the nearest 10",
+          typeLabel: "Multiple Select", points: "2", demoPct: 41,
+          blocks: [
+            { kind: "text", text: "Select two numbers that round to 200 when rounded to the nearest ten." },
+          ],
+          choices: [
+            { L: "A", text: "178", pct: 27, correct: false, dr: "Student may have rounded to the nearest hundred, as 178 rounds to 200 when rounded to the nearest hundred." },
+            { L: "B", text: "196", pct: 58, correct: true, dr: "Correct." },
+            { L: "C", text: "203", pct: 46, correct: true, dr: "Correct." },
+            { L: "D", text: "208", pct: 20, correct: false, dr: "Student may have attended to the hundreds and tens place only, not realizing 208 rounds to 210 when rounded to the nearest ten." },
+            { L: "E", text: "211", pct: 23, correct: false, dr: "Student may have rounded to the nearest hundred, as 211 rounds to 200 when rounded to the nearest hundred." },
+          ],
+        },
+        {
+          lc: "Round whole numbers to the nearest 100",
+          blocks: [
+            { kind: "text", text: "What is 354 rounded to the nearest hundred?" },
+          ],
+          choices: [
+            { L: "A", text: "300", pct: 16, correct: false, dr: "Student rounded the correct place value, but rounded down when they should have rounded up." },
+            { L: "B", text: "350", pct: 21, correct: false, dr: "Student rounded to the nearest ten instead of the nearest hundred." },
+            { L: "C", text: "360", pct: 2, correct: false, dr: "Student identified the correct rule for how to round the given number, but applied that rule to the wrong place value." },
+            { L: "D", text: "400", pct: 61, correct: true, dr: "Correct." },
+          ],
+        },
+      ],
+    });
+  }
+
+  qList() {
+    const r = this.state.report || {};
+    const key = r.grade + "|" + r.milestone;
+    const d = this.qData();
+    return d[key] || [];
+  }
+
+  norm(s) { return String(s || "").trim().replace(/\.$/, ""); }
+
+  qByLc(lc) {
+    return this.qList().find((q) => this.norm(q.lc) === this.norm(lc));
+  }
+
+  // % of students who demonstrated the learning component = % who answered
+  // the question correctly. For a 2-point (multiple-select) item, that means
+  // selecting BOTH correct choices, so use the item's joint demoPct.
+  demoPctFor(lc) {
+    const q = this.qByLc(lc);
+    if (!q) return null;
+    const correct = q.choices.filter((c) => c.correct);
+    if (correct.length > 1) {
+      return q.demoPct != null ? q.demoPct : Math.min.apply(null, correct.map((c) => c.pct));
+    }
+    return correct.length ? correct[0].pct : null;
+  }
+
+  // Build the per-choice student breakdown so that the number of students
+  // listed under each choice matches that choice's selection %. For a
+  // multiple-select item each student picks two choices, and exactly the
+  // demonstrated count of students appear under BOTH correct choices.
+  buildBreakdown(q, N, ROSTER) {
+    const ch = q.choices;
+    const counts = ch.map((c) => Math.max(0, Math.round((c.pct / 100) * N)));
+    const cIdx = ch.map((c, i) => (c.correct ? i : -1)).filter((i) => i >= 0);
+    const groups = ch.map(() => []);
+    const name = (x) => ROSTER[x % ROSTER.length];
+    if (cIdx.length < 2) {
+      // single-answer: each student picks exactly one choice
+      let pos = 0;
+      counts.forEach((n, ci) => { for (let k = 0; k < n; k++) { groups[ci].push(pos); pos++; } });
+      const breakdown = ch.map((c, i) => ({ header: c.L + "(" + counts[i] + ")", names: groups[i].map(name).sort((a, b) => a.localeCompare(b)) }));
+      return { breakdown, demoCount: cIdx.length ? counts[cIdx[0]] : 0 };
+    }
+    // multiple-select (two correct): each student may select AT MOST two
+    // choices. B students select both correct choices (they demonstrated the
+    // component); every remaining student is given at most two selections so
+    // no one is ever listed under more than two choices.
+    const c1 = cIdx[0], c2 = cIdx[1];
+    let B = q.demoPct != null ? Math.round((q.demoPct / 100) * N) : Math.min(counts[c1], counts[c2]);
+    B = Math.max(0, Math.min(B, counts[c1], counts[c2]));
+    const rem = counts.slice();            // remaining capacity per choice
+    const sel = [];                        // sel[studentIdx] = [choiceIdx,...]
+    for (let k = 0; k < B; k++) { sel.push([c1, c2]); rem[c1]--; rem[c2]--; }
+    for (let s = B; s < N; s++) {
+      const avail = rem.map((v, i) => [v, i]).filter((x) => x[0] > 0).sort((a, b) => b[0] - a[0]);
+      if (avail.length >= 2) { const i = avail[0][1], j = avail[1][1]; sel.push([i, j]); rem[i]--; rem[j]--; }
+      else if (avail.length === 1) { const i = avail[0][1]; sel.push([i]); rem[i]--; }
+      else { sel.push([]); }
+    }
+    sel.forEach((picks, si) => picks.forEach((ci) => groups[ci].push(si)));
+    const breakdown = ch.map((c, i) => ({ header: c.L + "(" + groups[i].length + ")", names: groups[i].map(name).sort((a, b) => a.localeCompare(b)) }));
+    return { breakdown, demoCount: B };
+  }
+
+
+  renderVals() {
+    const tab = this.state.tab;
+    const modal = this.state.modal;
+
+    const THRESHOLD = this.props.strengthThreshold ?? 68;
+    const report = this.state.report;
+    const CLASS_TOTAL = this.props.classSize ?? this.classSizeFor(report.grade);
+    const lcmap = this.state.lcmap;
+    const rawLcs = (lcmap && lcmap[report.grade] && lcmap[report.grade][report.milestone]) || [];
+    const hasQ = !!this.qData()[report.grade + "|" + report.milestone];
+    // Two independent data sources per learning component:
+    //   p  — Review Performance: % correct on this milestone's formative items,
+    //        available only after students take the milestone assessment.
+    //   d  — Prepare for Instruction: the class mean of the prediction scores
+    //        produced by the prior diagnostic (BOY for Milestone 1), which
+    //        forecasts performance on upcoming milestone content. Not derived
+    //        from, and not tied to, the milestone item data.
+    const items = rawLcs.map((lc, i) => {
+      let p = hasQ ? this.demoPctFor(lc) : null;
+      if (p == null) p = this.pct(report.grade, report.milestone, lc);
+      return { lc, p, d: this.diagPct(report.grade, report.milestone, lc), q: i + 1 };
+    });
+    const reviewRows = items.slice().sort((a, b) => b.p - a.p).map((x) => {
+      const n = Math.round((CLASS_TOTAL * x.p) / 100);
+      return {
+        lc: x.lc.endsWith(".") ? x.lc : x.lc + ".",
+        q: String(x.q),
+        hasQ: hasQ,
+        pct: x.p + "% of students (" + n + ")",
+        open: () => this.setState({ modal: "questions", qTab: Math.max(1, Math.min(x.q, QUESTIONS.length)) }),
+      };
+    });
+
+    const QUESTIONS = this.qList();
+    const QCOUNT = QUESTIONS.length;
+    const qTabs = Array.from({ length: QCOUNT }, (_, i) => i + 1).map((n) => {
+      const active = this.state.qTab === n;
+      return {
+        label: "Question " + n,
+        color: active ? "rgb(34,126,167)" : "rgb(53,59,71)",
+        border: active ? "border-bottom:2px solid rgb(34,126,167);" : "",
+        onClick: () => this.setState({ qTab: n }),
+      };
+    });
+
+    // Build the view for the currently-selected question tab.
+    // Some grade/milestone combinations have no published item data; fall back
+    // to an empty question so the report still renders.
+    const activeQ = QUESTIONS[(this.state.qTab || 1) - 1] || QUESTIONS[0] || { blocks: [], choices: [], lc: "" };
+    const qBlocks = activeQ.blocks.map((b) => ({
+      isText: b.kind === "text",
+      isImage: b.kind === "image" && !b.src,
+      isImageAsset: b.kind === "image" && !!b.src,
+      isRatioTable: b.kind === "ratioTable",
+      isTableGroup: b.kind === "tableGroup",
+      isList: b.kind === "list",
+      listItems: b.items || [],
+      imgEl: (b.kind === "image" && b.src) ? React.createElement("img", {
+        src: b.src,
+        alt: b.text || "",
+        style: { display: "block", width: b.imgWidth || "260px", maxWidth: "100%", height: "auto", border: "1px solid rgb(213,217,226)", borderRadius: "4px", background: "rgb(255,255,255)", padding: "8px" },
+      }) : null,
+      src: b.src || "",
+      imgWidth: b.imgWidth || "260px",
+      text: b.text || "",
+      rows: b.rows || [],
+      tRows: (b.rows || []).map((row, ri) => ({ cells: row, isHeader: !!b.header && ri === 0, notHeader: !(!!b.header && ri === 0) })),
+      tables: b.tables || [],
+    }));
+    const qChoices = activeQ.choices.map((c, i, arr) => ({
+      L: c.L,
+      text: c.text,
+      bg: c.correct ? "rgb(252,252,222)" : "rgb(245,245,245)",
+      borderLeft: c.correct ? "6px solid rgb(4,120,87)" : "none",
+      borderBottom: i === arr.length - 1 ? "none" : "1px solid rgb(222,226,230)",
+      letterWidth: c.correct ? "74px" : "80px",
+      letterColor: c.correct ? "rgb(53,59,71)" : "rgb(109,109,109)",
+      textColor: c.correct ? "rgb(53,59,71)" : "rgb(109,109,109)",
+    }));
+    const qDrRows = activeQ.choices.map((c, i, arr) => ({
+      pct: Math.round(c.pct) + "%",
+      L: c.L,
+      badgeBg: c.correct ? "rgb(167,243,208)" : "rgb(255,203,206)",
+      badgeColor: c.correct ? "rgb(4,120,87)" : "rgb(155,28,28)",
+      correct: c.correct,
+      answerText: c.text,
+      answerWeight: c.correct ? "400" : "700",
+      rationale: c.dr,
+      borderBottom: i === arr.length - 1 ? "none" : "1px dashed rgb(213,217,226)",
+    }));
+    const ROSTER = this.rosterFor(report.grade, CLASS_TOTAL);
+    const breakdown = this.buildBreakdown(activeQ, CLASS_TOTAL, ROSTER).breakdown;
+    const q = { typeLabel: activeQ.typeLabel || "Multiple Choice", points: activeQ.points || "1", lc: activeQ.lc, blocks: qBlocks, choices: qChoices, drRows: qDrRows };
+
+    // Top misconceptions: the distractor rationales chosen by the most students across all questions.
+    const allDistractors = [];
+    QUESTIONS.forEach((qq, qi) => {
+      qq.choices.forEach((c) => {
+        if (!c.correct) allDistractors.push({ pct: c.pct, dr: c.dr, qTab: qi + 1 });
+      });
+    });
+    allDistractors.sort((a, b) => b.pct - a.pct);
+    const misconceptions = allDistractors.slice(0, 2).map((m) => {
+      const n = Math.round((m.pct / 100) * CLASS_TOTAL);
+      return {
+        headline: Math.round(m.pct) + "% of students (" + n + ")",
+        text: m.dr,
+        open: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ modal: "questions", qTab: m.qTab }); },
+      };
+    });
+
+    const { grade, period, cycle, openF } = this.state;
+    const gray = "rgb(109,109,109)";
+    const ink = "rgb(53,59,71)";
+
+    const gradeOptions = [2, 3, 4, 5, 6, 7, 8].map((g) => ({
+      label: "Grade " + g,
+      onClick: () => this.setState({ grade: g, period: null, cycle: null, openF: null }),
+    }));
+    const periodOptions = grade
+      ? [{
+          label: "G" + grade + "-Period-1",
+          onClick: () => this.setState({ period: "G" + grade + "-Period-1", cycle: null, openF: null }),
+        }]
+      : [];
+    const cycleOptions = [1, 2].map((c) => ({
+      label: "Milestone " + c,
+      onClick: () => this.setState({ cycle: "Milestone " + c, openF: null }),
+    }));
+
+    // Full Learning Component Map document — every grade and milestone,
+    // parsed verbatim from the source PDF.
+    const lcfull = this.state.lcfull;
+    const resDoc = lcfull ? Object.keys(lcfull).sort((a, b) => a - b).map((g) => ({
+      grade: g,
+      title: "Grade " + g + " Learning Component Map",
+      milestones: Object.keys(lcfull[g]).filter((mn) => Number(mn) <= 2).sort((a, b) => a - b).map((mn) => {
+        const ms = lcfull[g][mn];
+        return {
+          num: "Milestone " + mn,
+          assess: "Assess after: " + (ms.assess || ""),
+          rows: ms.rows.map((r, i) => {
+            let std = r.std, lc = r.lc;
+            if (!std) {
+              const m = lc.match(/^(\d+\.[A-Z]+\.[A-Z]\.\d+(?:\.?[a-zA-Z])?)\s+(.+)$/);
+              if (m) { std = m[1]; lc = m[2]; }
+            }
+            return {
+            std: std, lc: lc, focus: r.focus,
+            rowBorder: (i > 0 && std !== "") ? "1px solid rgb(206,212,218)" : "1px solid rgb(235,236,238)",
+          };
+          }),
+        };
+      }),
+    })) : [];
+
+    // Student-level prediction table: real roster + real LCs, user-sortable.
+    // This matrix of per-student prediction scores is the source of truth for
+    // every class-level number below.
+    const SP = this.studentPred(report, items, ROSTER);
+
+    // Class-level distribution bar: average each student's prediction scores
+    // across all LCs, then split the assessed class at the threshold.
+    const assessedRows = SP.rows.filter((r) => r.assessed && r.avg != null);
+    const assessedN = assessedRows.length;
+    const successN = assessedRows.filter((r) => r.avg >= THRESHOLD).length;
+    const supportN = assessedN - successN;
+    const overallPct = assessedN ? Math.round((successN / assessedN) * 100) : 0;
+
+    // Plan class-level support: average each LC's prediction scores across the
+    // class, then compare that average to the same threshold.
+    items.forEach((it, j) => {
+      let s = 0, n = 0;
+      SP.rows.forEach((r) => { const v = r.scores[j]; if (v != null) { s += v; n++; } });
+      it.avg = n ? Math.round(s / n) : it.d;
+      it.kind = it.avg >= THRESHOLD ? "strength" : "challenge";
+    });
+    const strengthItems = items.filter((x) => x.kind === "strength").sort((a, b) => b.avg - a.avg);
+    const challengeItems = items.filter((x) => x.kind === "challenge").sort((a, b) => a.avg - b.avg);
+    const strengths = strengthItems.map((x, i) => ({ n: String(i + 1), lc: x.lc, first: i === 0, border: "rgb(53,59,71)" }));
+    const challenges = challengeItems.map((x, i) => ({ n: String(i + 1), lc: x.lc, first: i === 0, border: "rgb(53,59,71)" }));
+    const hover = this.state.hoverCell;
+    const sort = this.state.sort || { key: "name", dir: "asc" };
+    const RANK = { succ: 5, succ_p: 4, extra_p: 2, extra: 1, "null": 0, na: -1 };
+    const dm = sort.dir === "asc" ? 1 : -1;
+    const sortedRows = SP.rows.slice().sort((a, b) => {
+      if (sort.key === "name") return a.name.localeCompare(b.name) * dm;
+      let av, bv;
+      if (sort.key === "total") {
+        av = /^\d+$/.test(String(a.total)) ? Number(a.total) : -1;
+        bv = /^\d+$/.test(String(b.total)) ? Number(b.total) : -1;
+      } else {
+        const ci = Number(sort.key.slice(1));
+        av = RANK[a.cells[ci]] != null ? RANK[a.cells[ci]] : -1;
+        bv = RANK[b.cells[ci]] != null ? RANK[b.cells[ci]] : -1;
+      }
+      if (av !== bv) return (av - bv) * dm;
+      return a.name.localeCompare(b.name);
+    });
+    const caret = (key) => {
+      const active = sort.key === key;
+      return {
+        onClick: () => this.setSort(key),
+        up: active && sort.dir === "asc",
+        down: active && sort.dir === "desc",
+        both: !active,
+        bg: active ? "rgb(224,238,246)" : "rgb(255,255,255)",
+        bgHover: active ? "rgb(208,229,241)" : "rgb(246,247,249)",
+      };
+    };
+    const studentHead = caret("name");
+    const totalHead = caret("total");
+    const tableCols = SP.cols.map((label, i) => Object.assign({ label }, caret("c" + i)));
+    const tableRows = sortedRows.map((row, ri) => ({
+      name: row.name,
+      total: row.total,
+      totalColor: /^\d+$/.test(String(row.total)) ? "rgb(53,59,71)" : "rgb(109,109,109)",
+      cells: row.cells.map((key, ci) => {
+        const def = this.cellDef(key);
+        const id = ri + "-" + ci;
+        const isHover = hover === id;
+        return {
+          bg: isHover ? def.hoverBg : def.bg,
+          color: def.color,
+          text: def.text,
+          iconEmpty: def.icon === "empty",
+          iconPartial: def.icon === "partial",
+          showTip: isHover && !!def.tip,
+          tip: def.tip,
+          onEnter: () => this.setState({ hoverCell: id }),
+        };
+      }),
+    }));
+
+    return {
+      tableCols, tableRows, studentHead, totalHead,
+      onCellLeave: () => this.setState({ hoverCell: null }),
+      lcRows: reviewRows, qTabs, q, breakdown, misconceptions,
+      strengths, challenges,
+      noStrengths: items.length > 0 && strengths.length === 0,
+      noChallenges: items.length > 0 && challenges.length === 0,
+      reportTitle: "Math Teacher Report: Milestone " + report.milestone,
+      overallText: "After regular instruction, " + overallPct + "% of your class (" + successN + ") is likely to be successful",
+      successBarPct: overallPct + "%",
+      supportBarPct: (100 - overallPct) + "%",
+      successLegend: overallPct + "% of your class (" + successN + ") is likely to be successful",
+      supportLegend: (100 - overallPct) + "% of your class (" + supportN + ") is likely to need extra support",
+      qTab: this.state.qTab,
+      gradeOptions, periodOptions, cycleOptions,
+      gradeText: grade ? "Grade " + grade : "Select",
+      gradeColor: grade ? ink : gray,
+      periodText: period || "Select",
+      periodColor: period ? ink : gray,
+      periodOpacity: grade ? "1" : "0.5",
+      cycleText: cycle || "Select",
+      cycleColor: cycle ? ink : gray,
+      cycleOpacity: period ? "1" : "0.5",
+      gradeOpen: openF === "grade",
+      periodOpen: openF === "period",
+      cycleOpen: openF === "cycle",
+      toggleGrade: () => this.setState({ openF: openF === "grade" ? null : "grade" }),
+      togglePeriod: () => { if (!grade) return; this.setState({ openF: openF === "period" ? null : "period" }); },
+      toggleCycle: () => { if (!period) return; this.setState({ openF: openF === "cycle" ? null : "cycle" }); },
+      // Review Performance is not published for Milestone 2 reports.
+      hasReview: report.milestone !== 2,
+      isPrepare: tab === "prepare" || report.milestone === 2,
+      isReview: tab === "review" && report.milestone !== 2,
+      prepTabColor: tab === "prepare" ? "rgb(34,126,167)" : "rgb(0,0,0)",
+      revTabColor: tab === "review" ? "rgb(34,126,167)" : "rgb(0,0,0)",
+      prepTabWeight: tab === "prepare" ? 700 : 400,
+      revTabWeight: tab === "review" ? 700 : 400,
+      prepTabBorder: tab === "prepare" ? "border-bottom:2px solid rgb(34,126,167);" : "",
+      revTabBorder: tab === "review" ? "border-bottom:2px solid rgb(34,126,167);" : "",
+      showData: modal === "data",
+      showQuestions: modal === "questions",
+      showResources: modal === "resources",
+      resDoc: resDoc,
+      openResources: () => this.setState({ modal: "resources" }),
+      stopLink: (e) => { if (e && e.preventDefault) e.preventDefault(); },
+      showMisconceptions: this.props.showMisconceptions ?? true,
+      showTooltipPrep: this.state.tooltip && !modal && tab === "prepare",
+      showTooltipRev: this.state.tooltip && !modal && tab === "review",
+      goPrepare: () => this.setState({ tab: "prepare", tooltip: true }),
+      goReview: () => this.setState({ tab: "review", tooltip: true }),
+      openData: () => this.setState({ modal: "data" }),
+      openQuestions: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ modal: "questions", qTab: 1 }); },
+      openReviewQ: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        const el = e && e.currentTarget;
+        const q = el ? parseInt(el.getAttribute("data-q"), 10) : 1;
+        this.setState({ modal: "questions", qTab: Math.max(1, Math.min(q || 1, QCOUNT)) });
+      },
+      closeModal: () => this.setState({ modal: null }),
+      dismissTooltip: () => this.setState({ tooltip: false }),
+      applyView: () => {
+        this.setState((s) => {
+          const g = s.grade;
+          const ms = s.cycle ? parseInt(String(s.cycle).replace("Milestone ", ""), 10) : null;
+          if (!g || !ms) return { tooltip: false, openF: null };
+          return { report: { grade: g, milestone: ms }, tooltip: false, openF: null };
+        });
+      },
+      stop: (e) => { if (e && e.stopPropagation) e.stopPropagation(); },
+    };
+  }
+}
+</script>
+</body>
+</html>
