@@ -1,13 +1,13 @@
 # Compass Math Teacher Report Demo
 
-Self-contained HTML prototype for the ANet / Compass Math demo. Each page is a single
-standalone file — no build step, no install. The pages load React/Babel and the Lato
-font from a CDN at runtime, so viewing them needs an internet connection.
+HTML prototype for the ANet / Compass Math demo. No build step, no install — the pages
+load React/Babel and the Lato font from a CDN at runtime, so viewing them needs an
+internet connection.
 
 ## Pages
 
 - `index.html` — redirects to the Performance report (entry point).
-- `Compass Math Teacher Report.html` — Performance tab (Prepare for Instruction / Review Performance).
+- `Compass Math Teacher Report.dc.html` — Performance tab (Prepare for Instruction / Review Performance). Depends on `support.js` and `assets/`.
 
 ## Publish with GitHub Pages
 
