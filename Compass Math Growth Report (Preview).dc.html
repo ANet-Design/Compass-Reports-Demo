@@ -76,12 +76,12 @@
             <div style="align-self: stretch; border-radius: 4px; background: rgb(253,246,205); border: 1px solid rgb(240,207,72); padding: 14px 16px; display: flex; flex-direction: row; gap: 10px; align-items: center">
               <span style="width:22px; height:22px; flex-shrink:0; margin-top:2px; color:rgb(92,68,2); display:inline-flex;"><svg viewBox="0 -960 960 960" width="100%" height="100%" fill="currentColor"><path d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm155-121.5q0-33.5 23-56.5t57-23q34 0 57 23t23 56.5q0 33.5-23 56.5t-57 23q-34 0-57-23t-23-56.5ZM565-220l84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"></path></svg></span>
               <div style="display:flex; flex-direction:column; gap:4px;">
-                <span style="font-size:16px; line-height:1.45; color:rgb(92,68,2); text-wrap:pretty;">A Math Growth Report is coming soon, featuring school and grade-level growth data. Scope and design is subject to change.<br></span>
+                <span style="font-size:16px; line-height:1.45; color:rgb(92,68,2); text-wrap:pretty;">A Math Growth Report is coming soon, featuring grade-level growth data. Design is subject to change.<br></span>
                 <span style="font-size: 14px; line-height: 1.4; font-style: italic; color: #7E755B; text-wrap: pretty; display: none">*Scope and design is subject to change.</span>
               </div>
             </div>
             <div ref="{{ filterRef }}" style="display:flex; flex-direction:row; gap:8px; align-items:flex-end; flex-wrap:wrap; position:relative; z-index:20;">
-              <div style="display:flex; flex-direction:column; gap:6px; width:190px; position:relative;">
+              <div style="display: none; flex-direction: column; gap: 6px; width: 190px; position: relative">
                 <span style="font-size:14px; color:rgb(103,112,125);">School</span>
                 <div onClick="{{ toggleSchool }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 10px; font-size:16px; background:rgb(255,255,255); cursor:pointer;" style-hover="border-color:rgb(34,126,167);"><span style="color:rgb(53,59,71); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ schoolText }}</span><span style="width:11px; height:11px; flex-shrink:0; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span></div>
                 <sc-if value="{{ schoolOpen }}">
@@ -92,7 +92,7 @@
                   </div>
                 </sc-if>
               </div>
-              <div style="display:flex; flex-direction:column; gap:6px; width:140px; position:relative;">
+              <div style="display: none; flex-direction: column; gap: 6px; width: 140px; position: relative">
                 <span style="font-size:14px; color:rgb(103,112,125);">Grade</span>
                 <div onClick="{{ toggleGrade }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 10px; font-size:16px; background:rgb(255,255,255); cursor:pointer;" style-hover="border-color:rgb(34,126,167);"><span style="color:rgb(53,59,71); white-space:nowrap;">{{ gradeText }}</span><span style="width:11px; height:11px; flex-shrink:0; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span></div>
                 <sc-if value="{{ gradeOpen }}">
@@ -148,7 +148,7 @@
               </div>
 
               <div style="align-self:stretch; border-radius:6px; box-shadow:inset 0 0 0 1px rgb(213,217,226); display:flex; flex-direction:column; gap:32px; padding:16px 24px;">
-                <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                <div style="display:none; flex-direction:row; gap:8px; align-items:center;">
                   <span style="font-size:14px; line-height:100%; color:rgb(53,59,71); white-space:nowrap;">Group by</span>
                   <div style="display:flex; flex-direction:row; height:33px; border-radius:4px; background:rgb(236,238,242); padding:4px;">
                     <div onClick="{{ setGrowthSchool }}" style="min-width:74px; border-radius:4px; padding:0 10.5px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:500; line-height:100%; cursor:pointer; user-select:none; background:{{ growthSchoolBg }}; color:{{ growthSchoolFg }};">School</div>
@@ -185,7 +185,7 @@
             <div style="align-self:stretch; display:flex; flex-direction:column; gap:16px; padding:0 16px;">
               <span style="font-weight:700; font-size:22px; line-height:100%; color:rgb(53,59,71);">End of Year Percentile Projection (EYP)</span>
               <div style="align-self:stretch; border-radius:6px; box-shadow:inset 0 0 0 1px rgb(213,217,226); display:flex; flex-direction:column; gap:32px; padding:24px 16px;">
-                <div style="display:flex; flex-direction:row; gap:8px; align-items:center;">
+                <div style="display:none; flex-direction:row; gap:8px; align-items:center;">
                   <span style="font-size:14px; line-height:100%; color:rgb(53,59,71); white-space:nowrap;">Group by</span>
                   <div style="display:flex; flex-direction:row; height:33px; border-radius:4px; background:rgb(236,238,242); padding:4px;">
                     <div onClick="{{ setEypSchool }}" style="min-width:74px; border-radius:4px; padding:0 10.5px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:500; line-height:100%; cursor:pointer; user-select:none; background:{{ eypSchoolBg }}; color:{{ eypSchoolFg }};">School</div>
@@ -454,7 +454,7 @@ function radio(active) {
 
 class Component extends DCLogic {
   state = {
-    growthBy: "School", eypBy: "School",
+    growthBy: "Grade", eypBy: "Grade",
     school: "All Schools", pendingSchool: "All Schools", schoolOpen: false,
     grade: "All Grades", pendingGrade: "All Grades", gradeOpen: false,
     cycle: "Milestone 2", pendingCycle: "Milestone 2", cycleOpen: false,
