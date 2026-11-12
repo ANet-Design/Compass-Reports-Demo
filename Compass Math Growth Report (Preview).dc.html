@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
 <style>
+  @keyframes dcSpin { to { transform: rotate(360deg); } }
   * { box-sizing: border-box; }
   body { margin: 0; background: rgb(226,230,236); font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(53,59,71); }
   a { color: rgb(0,120,163); text-decoration: none; }
@@ -27,10 +28,22 @@
         <span style="font-size:16px; color:rgb(53,59,71);">Welcome, Alicia</span>
         <a href="#">Log Out</a>
       </div>
-      <div style="display:flex; flex-direction:row; gap:24px; align-items:flex-end;">
+      <div style="display:flex; flex-direction:row; gap:24px; align-items:center;">
         <img src="assets/myanet-logo.png" alt="myANet" style="width:140px; height:49px; object-fit:contain; flex-shrink:0;">
         <span style="font-weight:700; font-size:36px; line-height:28px; color:rgb(53,59,71); white-space:nowrap;">ANet Demo School</span>
-        <a href="#">Change Selection</a>
+        <div style="position:relative; width:130px; z-index:30;">
+          <div role="button" tabindex="0" aria-label="Curriculum" aria-haspopup="listbox" onClick="{{ toggleCurriculum }}" style="height:37px; border:1px solid rgb(213,217,226); border-radius:6px; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 10px; font-size:16px; cursor:pointer; background:rgb(255,255,255); transition:border-color 0.15s;" style-hover="border-color:rgb(34,126,167);">
+            <span style="color:rgb(53,59,71); white-space:nowrap;">{{ curriculumPick }}</span>
+            <span style="width:11px; height:11px; flex-shrink:0; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%" aria-hidden="true"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
+          </div>
+          <sc-if value="{{ curriculumOpen }}" hint-placeholder-val="{{ false }}">
+            <div role="listbox" aria-label="Curriculum" style="position:absolute; top:41px; left:0; width:150px; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
+              <sc-for list="{{ curriculumOptions }}" as="o" hint-placeholder-count="2">
+                <div role="option" onClick="{{ o.onClick }}" style="padding:8px 12px; font-size:16px; color:rgb(53,59,71); cursor:pointer;" style-hover="background:rgb(246,247,249);">{{ o.label }}</div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
       </div>
       <div style="display:flex; flex-direction:row; align-items:flex-end; border-bottom:1px solid rgb(213,217,226); background:rgb(255,255,255);">
         <div style="padding:14px 15.75px;"><span style="font-size:16px; white-space:nowrap; color:rgb(53,59,71);">Dashboard</span></div>
@@ -121,6 +134,13 @@
             <div style="align-self:stretch; height:1px; background:rgb(213,217,226);"></div>
           </div>
 
+          <!-- LOADING STATE (shown briefly after "View") -->
+          <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+            <div role="status" aria-label="Loading report" style="align-self:stretch; min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;">
+              <div aria-hidden="true" style="width:40px; height:40px; border-radius:50%; border:4px solid rgb(213,217,226); border-top-color:rgb(34,126,167); animation:dcSpin 0.8s linear infinite;"></div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notLoading }}" hint-placeholder-val="{{ true }}">
           <!-- TITLE -->
           <div style="align-self:stretch; padding:0 16px; display:flex; flex-direction:row; gap:12px; align-items:center;">
             <span style="font-weight:700; font-size:30px; line-height:100%; color:rgb(53,59,71);">Math Growth Report</span>
@@ -218,6 +238,7 @@
             </div>
 
           </div>
+          </sc-if>
         </div>
       </div>
     </div>
@@ -452,8 +473,15 @@ function radio(active) {
   };
 }
 
+// Curriculum shown across the Compass reports (ESQ or IM360). Chosen in the top
+// nav and remembered in this browser so every report opens on the same one.
+const CURRICULUM_KEY = "anetCompassCurriculum";
+function readCurriculum() { try { return window.localStorage.getItem(CURRICULUM_KEY) === "IM360" ? "IM360" : "ESQ"; } catch (e) { return "ESQ"; } }
+function saveCurriculum(v) { try { window.localStorage.setItem(CURRICULUM_KEY, v); } catch (e) {} }
+
 class Component extends DCLogic {
   state = {
+    curriculumPick: readCurriculum(),
     growthBy: "Grade", eypBy: "Grade",
     school: "All Schools", pendingSchool: "All Schools", schoolOpen: false,
     grade: "All Grades", pendingGrade: "All Grades", gradeOpen: false,
@@ -554,6 +582,17 @@ class Component extends DCLogic {
     const src = showData ? this.rows(this.state.growthBy) : [];
     const esrc = showData ? this.rows(this.state.eypBy) : [];
     return {
+      // Curriculum (display-only here: growth data isn't curriculum-specific).
+      curriculumPick: this.state.curriculumPick,
+      curriculumOpen: !!this.state.curriculumOpen,
+      toggleCurriculum: () => this.setState({ curriculumOpen: !this.state.curriculumOpen }),
+      curriculumOptions: ["ESQ", "IM360"].map((v) => ({ label: v, onClick: () => {
+        saveCurriculum(v);
+        clearTimeout(this._viewTimer);
+        this.setState({ curriculumPick: v, curriculumOpen: false, loading: true });
+        this._viewTimer = setTimeout(() => this.setState({ loading: false }), 500);
+      } })),
+      loading: !!this.state.loading, notLoading: !this.state.loading,
       growthRows: src.map(r => ({
         name: r.name, assessed: r.assessed,
         below: r.below, meeting: r.meeting, exceeding: r.exceeding,
@@ -620,11 +659,15 @@ class Component extends DCLogic {
       cycleOptions: Object.keys(CYCLES).map(label => ({
         label, onClick: () => this.setState({ pendingCycle: label, cycleOpen: false })
       })),
-      applyView: () => this.setState(s => ({
-        school: s.pendingSchool, grade: s.pendingGrade, cycle: s.pendingCycle,
-        ell: s.draftEll, iep: s.draftIep,
-        schoolOpen: false, gradeOpen: false, cycleOpen: false
-      }))
+      applyView: () => {
+        // Show a brief loading state so it's clear the report refreshed.
+        clearTimeout(this._viewTimer);
+        this.setState({ loading: true, schoolOpen: false, gradeOpen: false, cycleOpen: false });
+        this._viewTimer = setTimeout(() => this.setState(s => ({
+          school: s.pendingSchool, grade: s.pendingGrade, cycle: s.pendingCycle,
+          ell: s.draftEll, iep: s.draftIep, loading: false
+        })), 500);
+      }
     };
   }
 }
