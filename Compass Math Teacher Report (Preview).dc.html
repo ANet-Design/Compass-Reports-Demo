@@ -155,7 +155,7 @@
                   <span style="width:11px; height:11px; color:rgb(109,109,109); display:inline-flex;"><svg viewBox="0 0 14 14" width="100%" height="100%"><path d="M 1.28 0.22 C 0.987 -0.073 0.513 -0.073 0.22 0.22 C -0.073 0.513 -0.073 0.987 0.22 1.28 L 5.22 6.28 C 5.513 6.573 5.987 6.573 6.28 6.28 L 11.28 1.28 C 11.573 0.987 11.573 0.513 11.28 0.22 C 10.987 -0.073 10.513 -0.073 10.22 0.22 L 5.75 4.689 L 1.28 0.22 Z" fill="currentColor" transform="matrix(1 0 0 1 1.25 3.75)"></path></svg></span>
                 </div>
                 <sc-if value="{{ cycleOpen }}">
-                  <div style="position:absolute; top:65px; left:0; width:160px; max-height:260px; overflow:auto; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
+                  <div style="position:absolute; top:65px; left:0; width:160px; max-height:320px; overflow:auto; background:rgb(255,255,255); border:1px solid rgb(213,217,226); border-radius:6px; box-shadow:0 6px 16px rgba(0,0,0,0.14); z-index:40; padding:4px 0;">
                     <sc-for list="{{ cycleOptions }}" as="o" hint-placeholder-count="8">
                       <div onClick="{{ o.onClick }}" style="padding:8px 12px; font-size:16px; color:rgb(53,59,71); cursor:pointer;" style-hover="background:rgb(246,247,249);">{{ o.label }}</div>
                     </sc-for>
@@ -8530,7 +8530,7 @@ function readCurriculum() { try { return window.localStorage.getItem(CURRICULUM_
 function saveCurriculum(v) { try { window.localStorage.setItem(CURRICULUM_KEY, v); } catch (e) {} }
 
 class Component extends DCLogic {
-  state = { curriculum: readCurriculum(), curriculumPick: readCurriculum(), tab: "prepare", modal: null, qTab: 1, tooltip: true, grade: 2, period: "G2-Period-1", cycle: "Milestone 1", openF: null, report: { grade: 2, milestone: 1, period: "G2-Period-1" }, lcmap: null, lcmapIM: null, diagIM: null, qim: null, lcfull: null, qgen: null, hoverCell: null, sort: { key: "name", dir: "asc" } };
+  state = { curriculum: readCurriculum(), curriculumPick: readCurriculum(), tab: "prepare", modal: null, qTab: 1, tooltip: true, grade: 5, period: "G5-Period-1", cycle: "Milestone 1", openF: null, report: { grade: 5, milestone: 1, period: "G5-Period-1" }, lcmap: null, lcmapIM: null, diagIM: null, qim: null, lcfull: null, qgen: null, hoverCell: null, sort: { key: "name", dir: "asc" } };
 
   // Static demo dataset for the student-level prediction table (exact values
   // from the wireframe). Each cell is a variant key:
@@ -8564,7 +8564,8 @@ class Component extends DCLogic {
       // "Not Assessed" describes the milestone assessment, not the diagnostic:
       // these students still carry diagnostic prediction scores, so they show
       // blank in the table but still count in the class distribution.
-      const absent = hash(name + "|abs|" + grade) % 100 < 8;
+      // Every student has a prediction (no "Not Assessed"/N/A rows).
+      const absent = false;
       // A per-student ability offset shifts that student off the class mean on
       // every LC, so rosters contain consistently strong and struggling students.
       const ability = (rnd(name + "|abil|" + grade) * 2 - 1) * 24;
@@ -8853,6 +8854,8 @@ class Component extends DCLogic {
   // standard map.
   lcsFor(report) {
     if (!report) return [];
+    // Milestones 3-8 are in the cycle filter but have no data yet.
+    if (Number(report.milestone) > 2) return [];
     const im = this.state.lcmapIM;
     if (this.isIM(report) && im && im[report.grade] && im[report.grade][report.milestone]) {
       return im[report.grade][report.milestone];
@@ -9240,7 +9243,8 @@ class Component extends DCLogic {
           onClick: () => this.setState({ period: p, cycle: null, openF: null }),
         }))
       : [];
-    const cycleOptions = [1, 2].map((c) => ({
+    // Milestones 1-8 for every grade and curriculum; only 1-2 have data so far.
+    const cycleOptions = [1, 2, 3, 4, 5, 6, 7, 8].map((c) => ({
       label: "Milestone " + c,
       onClick: () => this.setState({ cycle: "Milestone " + c, openF: null }),
     }));
@@ -9251,7 +9255,7 @@ class Component extends DCLogic {
     const resDoc = lcfull ? Object.keys(lcfull).sort((a, b) => a - b).map((g) => ({
       grade: g,
       title: "Grade " + g + " Learning Component Map",
-      milestones: Object.keys(lcfull[g]).filter((mn) => Number(mn) <= 2).sort((a, b) => a - b).map((mn) => {
+      milestones: Object.keys(lcfull[g]).sort((a, b) => a - b).map((mn) => {
         const ms = lcfull[g][mn];
         return {
           num: "Milestone " + mn,
@@ -9431,8 +9435,9 @@ class Component extends DCLogic {
       noChallenges: items.length > 0 && challenges.length === 0,
       reportTitle: "Math Teacher Report: Milestone " + report.milestone,
       overallText: supportN + (supportN === 1 ? " student is" : " students are") + " overall likely to need extra support with regular instruction",
-      successBarPct: overallPct + "%",
-      supportBarPct: (100 - overallPct) + "%",
+      // No learning components (Milestones 3-8 for now): leave the bar empty.
+      successBarPct: (items.length ? overallPct : 0) + "%",
+      supportBarPct: (items.length ? 100 - overallPct : 0) + "%",
       successLegend: "Likely to be successful with regular instruction: " + successN,
       supportLegend: "Likely to need extra support with regular instruction: " + supportN,
       qTab: this.state.qTab,
